@@ -76,7 +76,7 @@ The font wrapper is mandatory — if you just move `\begin{itemize}` outside `\l
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     TITLE NAME
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\namesection{}{\Huge{[YOUR_NAME]}}{  \href{mailto:[YOUR_EMAIL]}{[YOUR_EMAIL]} | [YOUR_PHONE] |  \urlstyle{same}\href{[YOUR_LINKEDIN_URL]}{LinkedIn}
+\namesection{}{\Huge{Jose Gerardo Mart\'inez Mor\'an}}{  \href{mailto:geramtz100@gmail.com}{geramtz100@gmail.com} | (+52) 871-310-7796 |  \urlstyle{same}\href{https://www.linkedin.com/in/geramoran/}{LinkedIn}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -108,7 +108,7 @@ The font wrapper is mandatory — if you just move `\begin{itemize}` outside `\l
 % doubled break triggers "! LaTeX Error: There's no line here to end."
 \closing{Kind regards,}
 
-\signature{[YOUR_NAME]}
+\signature{Jose Gerardo Mart\'inez Mor\'an}
 \end{flushright}
 \end{document}
 ```
@@ -158,7 +158,14 @@ Escape these wherever they appear in body text:
 ### Non-English Cover Letters
 - Same template structure, just write content in the posting's language
 - Adjust date format to local convention
-- Adjust closing to local convention (e.g. "Med venlig hilsen," for Danish)
+- Adjust closing to local convention
+
+**Spanish (Mexico) conventions for this candidate** — most postings will be in Spanish:
+- Salutation: `Estimado equipo de [Empresa],` or `Estimada [Nombre],` when the contact is known. Avoid `A quien corresponda`.
+- Closing: `Saludos cordiales,` (neutral professional) or `Quedo atento a sus comentarios.` before the closing line. Avoid the stiff `Atentamente` unless the company's own tone is formal.
+- Date: `\currentdate{10 de agosto de 2026}` — lowercase month, no comma before the year.
+- Use `usted`, never `tú`, unless the company's careers page is visibly informal.
+- Accents must be escaped or the file compiled with proper UTF-8 handling under XeLaTeX: `\'a \'e \'i \'o \'u \~n` are always safe.
 
 ## Checklist Before Finalizing
 - [ ] No em-dashes (use commas or periods instead)
@@ -178,3 +185,56 @@ Escape these wherever they appear in body text:
 - Export as PDF to preserve formatting
 - Name files clearly: "[Your Name] CV" and "[Your Name] Cover Letter"
 - Follow all employer instructions regarding anonymity or specific materials
+
+## Established Body Structure (extracted from archived letters)
+
+<!-- Added by /setup Path A on 2026-08-21 from cover_letters/cover_prospera_ai_backend_engineer.tex, -->
+<!-- cover_letters/cover_teradata_ai_data_engineer.tex, and the plain-text variant archived in -->
+<!-- documents/applications/prospera_ai_ai_backend_engineer/application_form_2026-08-13.md -->
+
+Three letters, one repeated skeleton. Follow it unless the posting demands otherwise. See
+`03-writing-style.md` "Patterns Observed in Past Applications" for the voice-level detail.
+
+```
+1. Salutation
+2. Opening      - role named in the first clause, then straight to the AI orchestration
+                  layer at MySourcing, framed against THEIR product. Add the GMT-6 /
+                  remote-delivery line if the role is remote.
+3. Bridge       - "Here is what I would bring to the areas the role covers:"
+4. Itemize      - exactly 3 bullets, bold labels lifted from the posting's own headings
+5. GAP PARAGRAPH - see below. This is the signature move; do not drop it.
+6. Company      - one independently verified, dated fact + why this role specifically
+7. Method       - Claude Code + spec-driven development, tied to a need they stated
+8. Close        - "I look forward to hearing from you." / "Kind regards,"
+```
+
+### The gap paragraph (mandatory for this candidate)
+
+Every archived letter names what he does not meet, in its own paragraph, before the company paragraph.
+The formula:
+
+> "[One/Two] [must-have/requirement(s)] I do not meet, stated plainly. **[The gap, named exactly.]**
+> [Why it is adjacent rather than absent - what he *does* have that borders it.] [Closing line that makes
+> the disclosure a service to the reader.]"
+
+Worked examples:
+
+> "One must-have I do not meet, stated plainly. My four production years are in TypeScript and Node.js, not
+> Python, so the Python bar is a language gap rather than an architecture one; my Python is agent
+> development through LangChain and LangGraph. I have not shipped RAG or vector search either, though
+> PostgreSQL is my strongest data skill and pgvector runs on ground I know. Better you hear both from me
+> now than find them in the take-home."
+
+> "Two requirements I do not meet, stated plainly. I have not run data processing at scale on parallel
+> frameworks such as Spark or Kafka; my throughput work was queue-based asynchronous processing and query
+> tuning. And my AI experience is orchestration, not MLOps: I have shipped LLM applications, never trained,
+> fine-tuned or served models. Both are adjacent to what I do rather than repeats of it, and I would rather
+> you knew now than found out in the first sprint."
+
+**Why this earns its space on a one-page letter:** the rest of the letter makes strong claims, and this
+paragraph is what makes them credible. It also pre-empts the exact objection a screener would raise, on his
+terms rather than theirs. Cap it at two gaps: three starts reading as a disqualification, and a letter that
+needs three is a signal to re-check the fit score before drafting at all.
+
+**Do not soften it into a strengths paragraph.** "While I have limited exposure to X, I am a fast learner"
+is the failure mode. Name the gap, draw its boundary, stop.

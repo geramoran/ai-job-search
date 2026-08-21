@@ -1,10 +1,10 @@
-# Job Application Assistant for [YOUR_NAME]
+# Job Application Assistant for Jose Gerardo Martínez Morán
 
-<!-- SETUP: This file is populated by running /setup -->
-<!-- After running /setup, all [PLACEHOLDER] tokens will be replaced with your actual information -->
+<!-- Populated by /setup Path A on 2026-08-10 from documents/cv, documents/linkedin, documents/diplomas -->
+<!-- Canonical detail lives in .claude/skills/job-application-assistant/01-candidate-profile.md -->
 
 ## Role
-This repo is a job application workspace. Claude acts as a career advisor and application assistant for [YOUR_NAME], helping with:
+This repo is a job application workspace. Claude acts as a career advisor and application assistant for Jose Gerardo, helping with:
 1. **Job fit evaluation** - Assess job postings against your profile (skills, experience, behavioral traits)
 2. **CV tailoring** - Adapt existing CV templates (LaTeX/moderncv) to target specific roles
 3. **Cover letter writing** - Draft targeted cover letters using existing templates (LaTeX)
@@ -16,76 +16,103 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 <!-- This section is auto-populated by /setup. You can also fill it in manually. -->
 
 ### Identity
-- **Name:** [YOUR_NAME]
-- **Location:** [YOUR_CITY], [YOUR_COUNTRY] ([YOUR_COMMUTE_CONSTRAINTS])
+- **Name:** Jose Gerardo Martínez Morán
+- **Location:** Torreón, Coahuila, Mexico (GMT-6). Open to remote (Mexico/LatAm and international), hybrid locally, and relocation within Mexico. Not open to fully on-site 5 days/week.
+- **Contact:** geramtz100@gmail.com · (+52) 871-310-7796 · [LinkedIn](https://www.linkedin.com/in/geramoran/) · [GitHub](https://github.com/geramoran)
 - **Languages:**
   | Language | Level |
   |----------|-------|
-  | [LANGUAGE] | [LEVEL] |
-  <!-- Every language you work in professionally, with your level (CEFR, "native," "professional
-  working proficiency," whatever your CV/LinkedIn use - no need to force it into one scale). An
-  undeclared language is a hard deal-breaker if a posting requires it; a declared language at a
-  lower level than a posting wants is flagged for your own judgment, not auto-rejected. See
-  04-job-evaluation.md's Language Gate. -->
-- **CV language:** [YOUR_CV_LANGUAGE] <!-- English unless your market expects otherwise; /setup asks -->
-
-- **Status:** [YOUR_EMPLOYMENT_STATUS]
-- **LinkedIn headline:** "[YOUR_LINKEDIN_HEADLINE]"
+  | Spanish | Native |
+  | English | B1 Intermediate (EF SET 41/100, 23 May 2025 — Reading B2, Speaking B1, Writing A2, **Listening A2**) |
+- **CV language:** Both — English for remote-international postings, Spanish for Mexico/LatAm postings
+- **Status:** Actively job seeking since August 2026 (MySourcing role ended July 2026)
+- **Professional licence:** Cédula Profesional 12320388 (SEP), issued 31 May 2021
+- **LinkedIn headline:** "Fullstack Senior Developer en Mysourcing | PHP | TypeScript | ExpressJS | AngularJS | ReactJS | VueJS | Laravel | NextJS | Claude code | Langchain" *(needs updating: role ended, and the Languages section wrongly claims English "Full Professional")*
 
 ### Education
-<!-- List your degrees, most recent first -->
-- **[DEGREE_LEVEL] in [FIELD]** ([YEAR_START]-[YEAR_END]) - [INSTITUTION]
-  - Thesis: "[THESIS_TITLE]"
-  - Topics: [KEY_TOPICS]
+- **Ingeniero en Informática** (Bachelor's / Licenciatura) — Instituto Tecnológico Superior de Lerdo, Durango, Mexico
+  - Studies 2010-2015; acto recepcional 16 Oct 2017; degree issued 22 Mar 2018
+  - Official title verified against the diploma and the cédula profesional in `documents/diplomas/`
+  - Mención Honorífica (candidate-reported)
 
 ### Professional Experience
-<!-- List your roles, most recent first -->
-- **[JOB_TITLE]** ([START_DATE] - [END_DATE]) - **[COMPANY]** ([LOCATION])
-  - [KEY_RESPONSIBILITY_1]
-  - [KEY_RESPONSIBILITY_2]
-  - [KEY_ACHIEVEMENT]
+- **Full-Stack Web & AI Developer Senior** (May 2022 - Jul 2026) - **MySourcing** (Acapulco de Juárez, Guerrero — remote)
+  - Built an **AI orchestration layer** exposing the company's product suite as tools callable by an LLM
+  - Architected a multitenant, end-to-end encrypted real-time chat platform acting as a unified API hub across products (TypeScript, React, Node.js, Socket.io, Prisma, PostgreSQL)
+  - Built a full purchase-requisition lifecycle portal: multi-level authorization, supplier management, payment tracking, real-time dashboards
+  - 2022-2024: HR/payroll modules and payroll calculation engine (PHP, Laravel, AngularJS, MySQL)
+- **Desarrollador Fullstack Mid TypeScript** (Jan 2022 - Apr 2022) - **BOZ IT Development**
+  - Payroll (nóminas) and financial projection system modules with complex transactional logic (TypeScript, Node.js, SQL Server, DevExpress)
+- **Webmaster Developer** (Jul 2021 - Jan 2022) - **Basculas REVUELTA** (Torreón)
+  - Group websites on ASP.NET MVC, Umbraco, AngularJS; Magento e-commerce administration and custom PHP plugins
+- **Freelance Full-Stack Developer** (Nov 2020 - Jun 2021) - **ATT / ProntoForms project** (remote)
+  - Sole developer: full warehouse, inventory and delivery-logistics platform, architecture through production (PHP 8, Laravel 8, Vue.js, MySQL, Redis, Docker, AWS S3)
+- **Analista de Desarrollo (Analyst Developer)** (Sep 2019 - Oct 2020) - **Grupo Batta Hermanos** (Torreón)
+  - Two Ionic/AngularJS mobile apps, Node/Vue website and ASP.NET MVC Core web service for voucher-distributor onboarding; increased distributor quota and reduced processing time
+  - Maintained VisCoi ERP plugins written in Visual Basic 6.0
+- **Desarrollador Web y .NET** (Feb 2017 - Apr 2019) - **Asta Software** (Torreón)
+  - Point-of-sale systems with electronic invoicing and airtime integrations, now a top company revenue line
+  - E-commerce on Aimeos (PHP/Laravel) with PayPal and Conekta gateways
 
 ### Technical Skills
-- **Primary:** [YOUR_PRIMARY_SKILLS]
-- **Secondary:** [YOUR_SECONDARY_SKILLS]
-- **Domain:** [YOUR_DOMAIN_EXPERTISE]
-- **Software:** [YOUR_TOOLS_AND_SOFTWARE]
+- **Primary:** PHP/Laravel, TypeScript, ReactJS, Node.js/Express, VueJS, AngularJS, JavaScript/jQuery, C#/ASP.NET MVC, MySQL/MariaDB, SQL Server/T-SQL, PostgreSQL, Prisma ORM, Socket.io, Docker, HTML/CSS/Bootstrap/Tailwind
+- **Secondary:** LangChain, LangGraph, Claude API / LLM tool-calling, Python, Next.js, Redis, AWS S3, RxJS, Linux/Ubuntu, Magento, Umbraco, WordPress, Ionic, DevExpress, Visual Basic 6.0
+- **Domain:** Multitenant SaaS architecture, real-time systems, AI orchestration in production, ERP/HR/payroll, approval and requisition workflows, warehouse/logistics/inventory, point-of-sale and facturación electrónica, payment gateway integration
+- **Methodology:** Agentic engineering as a core practice — **Claude Code** daily, Spec-driven Development (Spec-kit), multi-agent orchestration; professional Git workflow (branching, PRs, code review)
 
 ### Certifications
-<!-- List relevant certifications with dates -->
-- **[CERTIFICATION_NAME]** - [HOURS]h - completed [DATE]
+- **Curso Completo: LangChain, LangGraph y Agentes IA con Python** (Udemy) - 18h - completed 4 May 2026
+- **EF SET English Certificate** - 41/100, B1 Intermediate - 23 May 2025
+- **Platzi** (signal subset of ~90 total): Claude AI ×2, Herramientas de AI para Developers, Prompt Engineering, Introducción al Desarrollo Backend, Fundamentos de Node.js, Docker ×2, Patrones de Diseño y Buenas Prácticas en PHP
 
 ### Publications
-<!-- List peer-reviewed publications, if any -->
-- [AUTHOR_LIST] ([YEAR]). [TITLE]. [JOURNAL].
+None.
 
 ### Awards
-<!-- List relevant awards, hackathons, competitions -->
-- [AWARD_NAME] - [EVENT] ([YEAR])
+- Mención Honorífica - Instituto Tecnológico Superior de Lerdo (2017)
+
+### References
+- Two *constancias laborales* on file in `documents/references/` (Asta, Batta). **Employment-verification letters, not recommendations** — never attach them to an application
+- Only usable referee: **Lic. José Antonio Vázquez Gómez**, Gerente de Sistemas, Asta Software (contact details not yet recorded)
+- **No referee from MySourcing**, the four-year most recent role. Biggest gap in the reference package
+- CVs say "More references are available upon request" and name nobody without prior consent
 
 ### Behavioral Profile
-<!-- Your behavioral assessment results (PI, DISC, Myers-Briggs, or self-assessment) -->
-- **[TRAIT_1]** - [DESCRIPTION]
-- **[TRAIT_2]** - [DESCRIPTION]
-- **Strengths:** [YOUR_STRENGTHS]
-- **Growth areas:** [YOUR_GROWTH_AREAS]
-- **Thrives in:** [YOUR_IDEAL_ENVIRONMENT]
+<!-- No formal assessment on file. Synthesized from LinkedIn About + work history. See 02-behavioral-profile.md -->
+- **End-to-end ownership** - repeatedly sole or lead developer on complete production systems
+- **Self-directed learning** - moved from PHP/Laravel to TypeScript/React and then into LLM orchestration inside a single employer
+- **Stack-agnostic pragmatism** - maintained a VB6 ERP in the same role where two hybrid mobile apps shipped
+- **Strengths:** Autonomy, architecture-through-deployment delivery, fast adoption of new tooling, integration-minded system design
+- **Growth areas:** Spoken/heard English (A2 listening), no documented people management, AI experience is applied orchestration rather than ML depth
+- **Thrives in:** Small teams or solo ownership of a defined system, greenfield or actively evolving products, environments where AI tooling is welcomed
 
 ### What Excites You
-<!-- What motivates you professionally -->
-- [PASSION_1]
-- [PASSION_2]
+- Bringing LLMs into real production workflows where their output has consequences (tool definitions, permissions, multitenant isolation, failure handling)
+- Owning a system end to end, from architecture to deployment
+- Building internal tooling that removes friction for other teams
+- Learning an unfamiliar stack on the job rather than waiting for permission
 
 ### Target Sectors
-<!-- Industries and companies you're targeting -->
-- [SECTOR_1]: [EXAMPLE_COMPANIES]
-- [SECTOR_2]: [EXAMPLE_COMPANIES]
+- **AI / Agentic engineering:** AI Engineer, AI Product Engineer, LLM Application Engineer
+- **Product / SaaS engineering:** Senior Full-Stack (TypeScript, React, Node.js)
+- **Backend engineering:** Senior Backend (PHP / Laravel)
 
 ### Deal-breakers
 <!-- Hard constraints on job search. Language requirements are handled separately and
 automatically from your Languages table above - don't duplicate them here. -->
-- [DEALBREAKER_1]
-- [DEALBREAKER_2]
+- Fully on-site 5 days/week with no hybrid option
+- Night on-call rotation or 24/7 support duty
+- Pure legacy maintenance with no new development
+- Body-shop staffing consultancies renting developers by the hour to a final client (cárnicas)
+
+### Honesty guardrails (check on every document)
+- **Nine years** of experience (career starts Feb 2017), not the "5" or "6+" the older CV drafts claim
+- AI work is **orchestration and integration**, never model training, fine-tuning, evaluation, or MLOps
+- English is **B1 Intermediate** (reading B2). Never "fluent", "advanced", or "full professional"
+- No people-management claims; technical ownership only
+- **Overall positioning is Senior: nine years of production web development since February 2017, with PHP/Laravel as the deepest single thread.** This is the default framing on every CV and cover letter, and it is not up for negotiation by any single job entry. The archived letters state it outright ("nine years building production backends", "nine years of relational data work, starting in 2017")
+- **One scoped exception, about a 2019 job title only:** the Batta Hermanos entry reads "Analista de Desarrollo" with no seniority suffix, because the official constancia from 2019 says "Jr" and a CV should not contradict a document the employer may hold. This constrains **how that one 2019-2020 line is labelled** and says nothing about current seniority
+- Asta Software was a **Régimen de Incorporación Fiscal (contractor) engagement**, though a full-time in-house role. Don't call it freelance on a CV
 
 ## Repo Structure
 - `cv/` - LaTeX CV variants (moderncv template, banking style)

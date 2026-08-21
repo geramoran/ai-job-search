@@ -17,6 +17,31 @@ framework_version: 1.2.0
    - **Never:** Claiming experience the candidate doesn't have; implying they worked in a domain they haven't.
    When a bullet falls in the "flag it" zone, present it to the user after drafting with: "This bullet is a stretch because X. Keep, soften, or drop?" If the evaluation experience match score is below 50, warn before proceeding to drafting that extensive reframing would be needed.
 
+## Seniority Positioning (non-negotiable)
+
+**Every CV and cover letter positions him as a senior engineer with nine years of production experience,
+starting February 2017 at Asta Software.** PHP/Laravel is the deepest single thread in those nine years,
+running from Asta through the ProntoForms platform and into MySourcing; TypeScript/React/Node is the
+recent convergence layered on top, not a replacement for it.
+
+State the nine years **explicitly and early** — in the profile statement, and again in the cover letter body
+where it supports a claim. The archived letters already do this and should keep doing it:
+
+> "nine years building production backends, most recently REST APIs on Node.js/Express, earlier on
+> PHP/Laravel and C#/ASP.NET" — *Prospera AI*
+>
+> "Underneath it sits nine years of relational data work, starting in 2017." — *Teradata*
+
+**Never let a single line reprice the whole profile.** Two entries in the history are labelled below
+current seniority and both are correct as history: the Batta Hermanos 2019-2020 title is "Analista de
+Desarrollo" without a suffix (the 2019 constancia says "Jr"), and BOZ IT 2022 was a "Mid" TypeScript role
+lasting four months. Neither modifies the senior framing — they are the early and middle of an arc whose
+end is nine years of end-to-end ownership. If a document or an interview answer starts sounding junior,
+that is a drafting bug, not an accurate reading of the profile.
+
+The counterweight to guard against in the other direction is the **"6+ years"** figure still live on his
+LinkedIn About section, and the "5 years" in the oldest CV drafts. Both understate him. Nine.
+
 ## Tone
 - **Warm but direct.** Friendly and approachable, but confident without arrogance.
 - **Conversational professional.** Not stiff corporate-speak, not casual chat. Think: how a confident person talks in a good job interview.
@@ -108,3 +133,48 @@ The cover letter is **not a CV repetition**. It should be forward-looking:
 - Default to the language of the job posting
 - Cover letters in the posting's language should feel natural, not translated
 - Slightly warmer, more personal tone may be acceptable in some languages
+
+## Patterns Observed in Past Applications
+
+<!-- Extracted by /setup Path A on 2026-08-21 from cover_letters/*.tex and -->
+<!-- documents/applications/*/application_form_*.md — three letters, one repeated structure. -->
+
+These are observations, not rules. They describe what the archived letters actually do, so future drafts
+stay recognisably the same voice.
+
+**1. Open with the artifact, not the ambition.** Both letters name the role in the first clause and then go
+straight to the AI orchestration layer at MySourcing, framed against *their* product: "The closest thing I
+have built to Sophie is..." (Prospera), "that is the exact problem I spent my last two years solving"
+(Teradata). No throat-clearing, no "I am passionate about".
+
+**2. A bridging sentence mapping to the posting's own section headings.** "Here is what I would bring to the
+four areas the role covers:" / "Mapped to the areas the role covers:" — then exactly three bullets whose
+bold labels are lifted from the posting's own wording ("Own the AI pipeline", "LLM integration and GenAI
+applications"). This is what makes the letters scan as answers rather than as a résumé restated.
+
+**3. The gap-disclosure paragraph — the most distinctive move in the set, and the one to keep.** Every
+letter has a dedicated paragraph naming what he does not meet, up front, with the boundary drawn precisely
+and a reason it is adjacent rather than absent:
+
+> "One must-have I do not meet, stated plainly. My four production years are in TypeScript and Node.js, not
+> Python, so the Python bar is a language gap rather than an architecture one." — *Prospera*
+>
+> "Two requirements I do not meet, stated plainly. I have not run data processing at scale on parallel
+> frameworks such as Spark or Kafka..." — *Teradata*
+
+It closes by making the disclosure a favour to the reader: *"Better you hear both from me now than find them
+in the take-home"* / *"I would rather you knew now than found out in the first sprint."* Keep this. It
+converts the profile's real weaknesses into evidence of judgment, and it is the reason these letters do not
+read as inflated.
+
+**4. One verified, dated company fact.** Teradata's letter cites the Autonomous Knowledge Platform reaching
+general availability in July. Per rule 5 above, verify independently before writing it — and note that
+Prospera's letter deliberately does **not** claim knowledge of "Sophie" beyond citing their own ad, because
+the product could not be verified outside the posting and its reposts.
+
+**5. Claude Code and spec-driven development named in the closing paragraph**, tied to something the
+employer said they need (writing standards into an early codebase, specification before code) rather than
+listed as a tool preference.
+
+**6. Close is four words.** "I look forward to hearing from you." then "Kind regards,". No second ask, no
+availability pitch, no gratitude paragraph.

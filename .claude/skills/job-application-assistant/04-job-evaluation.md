@@ -60,9 +60,15 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** [YOUR_PRIMARY_SKILLS]
-**Moderate match areas:** [YOUR_SECONDARY_SKILLS]
-**Weak match areas:** [SKILLS_YOU_LACK]
+**Strong match areas:** PHP/Laravel, TypeScript, ReactJS, Node.js/Express, VueJS, AngularJS, JavaScript/jQuery, C#/ASP.NET MVC, MySQL/MariaDB, SQL Server/T-SQL, PostgreSQL, Prisma ORM, Socket.io/real-time systems, Docker, multitenant SaaS architecture, REST API design, payment gateway integration, HTML/CSS/Bootstrap/Tailwind
+
+**Moderate match areas:** LangChain, LangGraph, Claude API / LLM tool-calling orchestration, Python, Next.js, Redis, AWS S3, RxJS, Git workflow at scale, Linux/Ubuntu, Magento, Umbraco, WordPress, Ionic, DevExpress, Visual Basic 6.0 (legacy maintenance)
+
+**Weak match areas:** ML model training and evaluation, MLOps / model serving infrastructure, data engineering pipelines (Spark, Airflow, dbt), Kubernetes, Terraform / IaC, Go, Rust, Java at production scale, mobile-native (Swift/Kotlin), security engineering, QA automation frameworks, cloud architecture certifications (AWS/GCP/Azure), **MongoDB / NoSQL document stores**, **browser automation (Playwright, Puppeteer) and proxy-pool management**, **RAG and vector databases** (pgvector is adjacent through PostgreSQL, but nothing has shipped)
+
+*The last three were added 2026-08-21 from real postings that named them: MongoDB and Playwright/Puppeteer plus proxy management were the two "desirable" gaps in the PoderJudicialVirtual ad (neither disqualified him), and RAG/vector search was a disclosed gap in the Prospera AI letter. They are the concrete shortlist for `/upskill`.*
+
+**Hard rule:** a posting whose core is ML model development (training, fine-tuning, evaluation) is not a match. The candidate's AI experience is **orchestration and integration** — wiring LLMs into production workflows — not model building. Score those postings on that distinction, and never let a CV or cover letter blur it.
 
 ### 2. Experience Match (0-100)
 Does work history align with what they're looking for? Match on the function and nature of the work performed, not the literal job title - a "Data Consultant" and a "Data Scientist" role can be functionally identical.
@@ -74,9 +80,13 @@ Does work history align with what they're looking for? Match on the function and
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** [YOUR_DIRECT_EXPERIENCE_DOMAINS]
-**Moderate:** [YOUR_ADJACENT_EXPERIENCE]
-**Entry-level:** [ROLES_WITH_LIMITED_EXPERIENCE]
+**Strong:** Senior full-stack web development (9 years, 2017-2026); multitenant SaaS platforms; ERP / HR / payroll systems; approval and requisition workflows; warehouse, inventory and logistics systems; point-of-sale and electronic invoicing (facturación electrónica); e-commerce with payment gateways; real-time messaging systems; end-to-end solo ownership of production systems
+
+**Moderate:** AI orchestration layers in production (LLM tool-calling, 2025-2026); encrypted communication platforms; mobile apps via Ionic hybrid; financial projection systems; webhook/third-party API integration; legacy system maintenance and migration
+
+**Entry-level:** Formal people management; agency or consultancy client-facing delivery; regulated-industry engineering (fintech compliance, health); large-scale distributed systems; roles requiring English as the working language day to day
+
+**Tenure note:** the MySourcing role spans 4 years 3 months and must be presented as a phased arc — payroll/personnel modules (2022-2024), then the Internal Chat Platform and Requisitions Portal (2025-2026) — so the span reads as a growth curve rather than one undifferentiated block. See `05-cv-templates.md` on tenure versus visible output.
 
 ### 3. Behavioral/Culture Fit (0-100)
 Does the role and company culture match the behavioral profile?
@@ -107,19 +117,128 @@ Does this role advance career goals and contain tasks that energize?
 | 0-39 | Dead end or backwards step |
 
 **Career goals:**
-- [YOUR_CAREER_GOAL_1]
-- [YOUR_CAREER_GOAL_2]
-- [YOUR_CAREER_GOAL_3]
+- Move from full-stack generalist toward **AI / agentic engineering**, building on the production LLM orchestration work started at MySourcing
+- Stay hands-on senior engineering (TypeScript / React / Node) as the stable base while the AI specialization deepens
+- Keep leveraging accumulated PHP/Laravel depth where the market rewards it
+- Work in environments where agentic engineering tooling (Claude Code, spec-driven development) is welcomed as methodology rather than tolerated as a curiosity
 
-**Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
-- Tasks that energize: [YOUR_ENERGIZING_TASKS]
-- Tasks that drain: [YOUR_DRAINING_TASKS]
-- Non-task factors: leadership style, department culture, company values, degree of autonomy
+**Target role directions** (all three are in scope, per the candidate):
+1. AI Engineer / AI Product Engineer / LLM Application Engineer
+2. Senior Full-Stack Engineer (TypeScript, React, Node.js)
+3. Senior Backend Engineer (PHP / Laravel)
 
-**Life situation alignment:** Consider personal constraints:
-- **Security**: [YOUR_FINANCIAL_SITUATION_CONTEXT]
-- **Flexibility**: [YOUR_SCHEDULE_CONSTRAINTS]
-- **Professional development**: [YOUR_GROWTH_PRIORITIES]
+**Motivation filter:** Evaluate not just whether the candidate *can* do the tasks, but whether the tasks will *energize* them.
+- **Tasks that energize:** owning a system end to end; greenfield architecture; integrating LLMs into real production workflows; multitenant and real-time systems; learning an unfamiliar stack on the job; building internal tooling that removes friction for other teams
+- **Tasks that drain:** pure maintenance with no development component; ticket queues without ownership; being rented by the hour to a client final; restricted tooling environments
+- Non-task factors: leadership style, degree of autonomy, whether modern AI tooling is permitted
+
+**Life situation alignment:**
+- **Security:** between roles since August 2026 (MySourcing ended July 2026). Actively searching. Willing to consider a broad range rather than holding out for a single profile.
+- **Flexibility:** based in Torreón, Coahuila (GMT-6). Open to remote (Mexico/LatAm and international), hybrid locally, and relocation to another Mexican city. Four years of proven remote delivery.
+- **Professional development:** priority is deepening AI/agentic engineering in a role that uses it in production, not in a role that merely permits experimentation.
+
+## Calibration from Past Applications
+
+<!-- Populated by /setup Path A on 2026-08-21 from documents/applications/*/outcome.md -->
+
+Only **one** application has a final outcome so far, so this section is thin by design. Five others are
+`in_progress` and are excluded from outcome calibration — they carry no fit signal yet. What they do carry
+is **process** signal: how the funnel behaved before anyone judged the work. That is worth recording
+because two of the three lessons below cost weeks and never tested the candidate technically.
+
+### Resolved outcomes
+
+**Capital One — Senior Software Engineer, Full Stack (rejected 2026-07-14).** Inbound: a recruiter
+approached him on LinkedIn. He passed the recruiter screen on 29 June, then hit form → psychometric test →
+**English-level test**, failed the English test, and was rejected. **No technical evaluation ever
+happened.** This is hard, non-self-reported confirmation of the B1 constraint: in a corporate funnel the
+language filter sits *before* any chance to demonstrate the work, so a strong technical score cannot
+compensate for it.
+
+> **Apply this when scoring:** if a posting or employer is a large corporate with a structured hiring
+> pipeline, assume a formal English assessment may gate the process and say so in the evaluation. It does
+> not make the role a reject — it makes it a role where the English test, not the CV, is the thing to
+> prepare for. Raise it with the user before drafting rather than after a rejection.
+
+### Process signals (from unresolved applications — not fit judgments)
+
+**Tyson Foods — eligibility filter, twice.** Requisition R0461331 (Development Engineer II MXT) was
+withdrawn by Tyson on 2026-06-16: *"we have withdrawn your application for this position as you do not
+meet the hiring eligibility requirements at this time."* No requirement was named. A second application to
+the same title went out 2026-07-30 and is unanswered. "Hiring eligibility" normally means work
+authorization, location or rehire policy — not technical capability. **Before scoring another Tyson
+posting, resolve what the filter actually was.** Re-applying blind to the same title is how the same
+rejection gets bought twice.
+
+**KONE — the hiring entity was not the posted one.** Applied 2026-07-30 via Workday, req R0660349. The
+acknowledgment arrived with a Spanish subject line and a **Romanian** body, which says the requisition is
+administered by a European KONE entity. **For any global Workday requisition, confirm the contracting
+country and entity before investing in follow-up**; a role administered from Europe against a
+Mexico-resident candidate may fail work-authorization or entity rules that never appear in the ad. See the
+Work Authorization Note above.
+
+**Prospera AI — direct beats the aggregator.** The role was distributed through Silver.dev and reposted
+across LatAm boards, and the initial assumption was that an agency would screen first. He applied instead
+through the company's own form at myprospera.ai, which means the employer may screen directly. **When a
+posting appears on aggregators, check for the company's own careers page and apply there.**
+
+### The one that went furthest — PoderJudicialVirtual (in progress)
+
+Worth its own entry because it is the only application that has been **evaluated technically**, and because
+it validates the scoring framework once.
+
+- `/rank` scored it **85/100, the highest of 103 postings triaged that day**, and it is the application that
+  advanced furthest. The framework picked correctly on the evidence available.
+- Screening passed 2026-08-13; technical assessment delivered 2026-08-17 inside the deadline. Next stage is
+  a 90-minute live technical session including code review of unfamiliar production code, **spoken, with no
+  AI assistants**.
+- **Why it scored so high:** stack identical to his (PHP/Laravel, Vue, MySQL at scale, REST, Git with PRs),
+  greenfield product with real ownership, and daily AI use as an explicit requirement rather than a
+  tolerance. The company confirmed on the call: *"usamos mucho IA para desarrollo... pero 100% no es vibe
+  coding, no es copy paste"* — which rewards exactly his profile, an AI-heavy workflow he can defend line
+  by line.
+- **Process reality to keep expectations calibrated:** ~200 applicants, all advanced in parallel, decision
+  explicitly not fast.
+
+> **The highest-value posting signal found so far.** The ad stated English is technical *reading* and
+> **"No se requiere hablarlo"**. That single line neutralises the A2 listening constraint that gates almost
+> every other role this profile fits, and it is what let the process reach a technical evaluation at all —
+> exactly where Capital One's ended. **Treat "English for reading documentation / no spoken requirement" as
+> a strong positive signal when scoring Career Alignment, and search for it actively rather than waiting
+> for it to appear.** Spanish-language Mexican and LatAm employers are the densest source.
+
+### What is not yet calibrated
+
+**No evaluator feedback has been received on any technical work**, so there is still no external read on how
+the profile performs once judged. The LexCore delivery is evidence of work done, not of work rated. Do not
+read the earlier rejections as technical signal — Capital One cut on English, Tyson on eligibility, and
+neither examined the engineering. Revisit once PJV responds or `/outcome` records a technical verdict.
+
+### Applications with generated documents but no archive folder
+
+`cv/` and `cover_letters/` contain finished documents for **Teradata (AI & Data Engineer)** and **Howdy
+(Senior Full Stack)** that have no `documents/applications/<company>_<role>/` folder, so they are invisible
+to `/outcome`, to `/gmail-sync` and to this calibration section. Their status is unknown. Run `/outcome`
+for both to close the gap, and treat the absence of a folder as "unknown", never as "not applied".
+
+## Hard Filters (auto-reject)
+
+These are the candidate's stated deal-breakers. A posting matching any of them is rejected without scoring:
+
+| Filter | Reject when |
+|--------|-------------|
+| Fully on-site | Requires 5 days/week on premises with no hybrid option |
+| On-call | Night on-call rotation or 24/7 support duty |
+| Legacy-only | Role is maintenance/support of existing systems with no new development |
+| Body-shop staffing | Consultancy that rents developers by the hour to a final client (cárnica / staffing por proyecto) |
+
+## Work Authorization Note (international remote)
+
+The candidate is a **Mexican citizen resident in Mexico**. For remote-international postings this means:
+- Roles offering **contractor / B2B engagement** are viable. Note it as a positive.
+- Roles requiring **US/EU work authorization, a specific country's residency, or employment through a local entity** are a hard fail unless the employer states they hire through an EOR (Deel, Remote.com, Ontop, Globant-style arrangements) or contract internationally.
+- Roles with a **timezone overlap requirement** are viable: GMT-6 overlaps well with all US timezones and with LatAm; it overlaps poorly with Europe (only the morning) and not at all with APAC. Flag European roles demanding full-day overlap.
+- Roles requiring **daily spoken English** should be flagged to the user before drafting, given EF SET listening at A2. Do not silently apply.
 
 ### 6. Salary Benchmark (Optional)
 

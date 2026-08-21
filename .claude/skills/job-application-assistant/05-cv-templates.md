@@ -52,7 +52,7 @@ Expected output: `Output written on main_<company>_<role>.pdf (2 pages, ...)`. A
     linkcolor=blue,
     filecolor=magenta,
     urlcolor=blue,
-    pdftitle={[YOUR_NAME] - CV},
+    pdftitle={Jose Gerardo Martinez Moran - CV},
     % Keep pdfpagemode=UseNone: this block runs after moderncv's own
     % \AtEndPreamble (moderncv.cls sets pdfpagemode there), so a FullScreen
     % value here would win and open every CV in fullscreen presentation mode.
@@ -62,13 +62,13 @@ Expected output: `Output written on main_<company>_<role>.pdf (2 pages, ...)`. A
 \usepackage{import}
 
 % Personal data
-\name{[FIRST_NAME]}{[LAST_NAME]}
+\name{Jose Gerardo}{Mart\'inez Mor\'an}
 % If you have no address to list, DELETE this whole line. \address{}{}{} fails
 % with "There's no line here to end" on every moderncv version.
-\address{[YOUR_ADDRESS]}{}{}
-\phone[mobile]{[YOUR_PHONE]}
-\email{[YOUR_EMAIL]}
-\extrainfo{\href{[YOUR_LINKEDIN_URL]}{LinkedIn}, \href{[YOUR_GITHUB_URL]}{GitHub}}
+\address{Torre\'on, Coahuila, M\'exico}{}{}
+\phone[mobile]{(+52) 871-310-7796}
+\email{geramtz100@gmail.com}
+\extrainfo{\href{https://www.linkedin.com/in/geramoran/}{LinkedIn}, \href{https://github.com/geramoran}{GitHub}}
 
 \begin{document}
 \makecvtitle
@@ -129,12 +129,42 @@ When the role sits outside your home domain, **lead with the domain-transfer arg
 
 **Create 2-3 profile statement templates for your main role types:**
 
-<!-- SETUP: These are populated based on your background -->
-**For [YOUR_PRIMARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_1]
+<!-- Populated by /setup Path A on 2026-08-10 -->
 
-**For [YOUR_SECONDARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_2]
+**For AI / Agentic Engineering roles (English):**
+> Computer engineer with nine years of full-stack production experience, now specializing in bringing large language models into real production systems. At MySourcing I designed and shipped an AI orchestration layer that exposed the company's entire product suite as tools callable by an LLM, turning cross-system workflows that previously required manual coordination into automated ones. That work sat on top of a multitenant, end-to-end encrypted chat platform I architected as a unified API hub across internal and external products. I build with TypeScript, React, Node.js, Prisma and PostgreSQL, and I practice agentic engineering as a working method, using Claude Code and spec-driven development daily rather than as an experiment.
+
+**For AI / Agentic Engineering roles (Spanish):**
+> Ingeniero en Informática con nueve años de experiencia full-stack en producción, ahora especializado en llevar modelos de lenguaje a sistemas productivos reales. En MySourcing diseñé y entregué una capa de orquestación de IA que expuso toda la suite de productos de la empresa como herramientas invocables por un LLM, convirtiendo flujos entre sistemas que antes requerían coordinación manual en procesos automatizados. Ese trabajo se apoyó en una plataforma de chat multitenant con cifrado extremo a extremo que arquitecté como hub de API unificado entre productos internos y externos. Construyo con TypeScript, React, Node.js, Prisma y PostgreSQL, y practico agentic engineering como método de trabajo cotidiano, usando Claude Code y desarrollo guiado por especificación.
+
+**For AI / Agentic Engineering roles — short variant (English)** *[Used for: prospera_ai_ai_backend_engineer]*
+> Computer engineer with nine years of production experience, the most recent two spent building LLM orchestration into systems in daily production use. At MySourcing I designed and shipped an AI orchestration layer that exposed the company's entire product suite as tools callable by an LLM, turning multi-step cross-system workflows into automated ones. It ran on top of a multitenant real-time platform I architected on TypeScript, Node.js, Socket.io, Prisma and PostgreSQL. I apply LLMs rather than train them: tool definitions, prompt design, multi-step workflows, permissions and failure handling. I practise agentic engineering as a working method, using Claude Code and spec-driven development daily.
+
+*Why keep both AI variants:* the long one above sells the architecture; this one is roughly two lines
+shorter and states the apply-versus-train boundary **inside the pitch** instead of leaving it to the cover
+letter. Use this one when the posting itself draws that line (Prospera's ad said "not a pure ML/research
+role — you'll apply LLMs, not train them"), or when the CV is running long. Claims verified against
+`01-candidate-profile.md` on 2026-08-21.
+
+**For Senior Full-Stack (TypeScript / React / Node) roles (English):**
+> Senior full-stack engineer with nine years of production experience building and owning web systems end to end, from architecture through deployment. Most recently I owned two greenfield platforms at MySourcing: a multitenant real-time chat system built on TypeScript, React, Node.js, Socket.io, Prisma and PostgreSQL, and a full purchase-requisition lifecycle portal with multi-level authorization and supplier management. Comfortable in large multi-year codebases, relational data modeling, REST API design, and containerized delivery with Docker, working through a professional Git workflow of branching, pull requests and code review.
+
+**For Senior Full-Stack (TypeScript / React / Node) roles (Spanish):**
+> Ingeniero full-stack senior con nueve años de experiencia en producción construyendo y siendo dueño de sistemas web de punta a punta, desde la arquitectura hasta el despliegue. Recientemente fui responsable de dos plataformas greenfield en MySourcing: un sistema de chat multitenant en tiempo real construido con TypeScript, React, Node.js, Socket.io, Prisma y PostgreSQL, y un portal completo del ciclo de vida de requisiciones de compra con autorización multinivel y gestión de proveedores. Me muevo con soltura en bases de código grandes y de varios años, modelado relacional, diseño de APIs REST y entrega contenerizada con Docker, trabajando con un flujo Git profesional de ramas, pull requests y revisión de código.
+
+**For Senior Backend / PHP-Laravel roles (English):**
+> Backend engineer with nine years of production experience, five of them building and maintaining PHP/Laravel systems across e-commerce, logistics, payroll and point-of-sale domains. As sole developer I designed and deployed a complete warehouse and delivery management platform on PHP 8 and Laravel 8, covering inventory control with blind counts and discrepancy reporting, dispatch and shipment logistics with full audit trails, ProntoForms webhook integration processing GPS and field photos in real time, and scheduled reporting through cron jobs and Laravel Queue. Strong on MySQL query optimization and indexing, payment gateway integration, and Docker-based deployment.
+
+**For Senior Backend / PHP-Laravel roles (Spanish):**
+> Ingeniero backend con nueve años de experiencia en producción, cinco de ellos construyendo y manteniendo sistemas PHP/Laravel en dominios de e-commerce, logística, nómina y punto de venta. Como desarrollador único diseñé y desplegué una plataforma completa de gestión de almacén y entregas sobre PHP 8 y Laravel 8, cubriendo control de inventario con conteos ciegos y reporte automático de discrepancias, logística de despacho y embarques con trazabilidad completa, integración de webhooks de ProntoForms procesando GPS y fotos de campo en tiempo real, y reportería programada con cron jobs y Laravel Queue. Sólido en optimización de consultas e indexado en MySQL, integración de pasarelas de pago y despliegue con Docker.
+
+### Honesty guardrails for this candidate
+
+Three claims recur across the archived CVs and must be checked every time:
+
+1. **Years of experience.** Career starts February 2017 (Asta Software). As of 2026 that is **nine years**, not the "5 years" or "6+ years" the older drafts claim. Use nine.
+2. **AI scope.** Claim **orchestration and integration** of LLMs. Never claim model training, fine-tuning, evaluation, or MLOps. LangChain/LangGraph knowledge is a completed course plus one production integration — say that much and no more.
+3. **English.** B1 Intermediate (EF SET 41/100, May 2025), with reading at B2. Never write "fluent", "advanced", or "full professional". If a CV section lists languages, the honest line is: *Spanish (native), English B1 Intermediate (EF SET certified, technical reading B2)*.
 
 Statements labeled *[Used for: <company>_<role>]* were extracted from archived application drafts by `/setup` Path A. They are **phrasing references, never fact sources**: when drafting from one, every factual claim still comes from `01-candidate-profile.md` - a past tailored draft does not vouch for its own accuracy.
 
@@ -210,6 +240,17 @@ Wherever the CV names a verifiable artifact - a public project, a hackathon entr
 - List 2-4 references with name, title, company, and contact
 - End with: "More references are available upon request."
 - **Do not attach reference letters** - employers typically contact references directly
+
+**What is actually on file for this candidate:** two Mexican *constancias laborales* in
+`documents/references/` (Asta Software, Batta Hermanos). These are **employment-verification letters, not
+recommendations** — they prove dates and title. Only the Asta one names a signatory
+(Lic. José Antonio Vázquez Gómez, Gerente de Sistemas) and is therefore the only one usable as a referee
+contact; the Batta letter is signed "Capital Humano" with no name. There is **no referee from MySourcing**,
+the four-year most recent role, which is the gap a reference check will notice first.
+
+Practical rule: the CV keeps "More references are available upon request" and lists nobody by name unless
+the candidate has confirmed that person agreed. Never attach a constancia to an application — hold them for
+background checks and onboarding forms, where proof of employment is what is being asked for.
 
 ### LaTeX Special Characters (important)
 
