@@ -165,6 +165,45 @@ Presenta este rol en dos etapas, porque el arco importa:
 promotora Elvira Richards. WordPress con tema PHP a la medida, módulos propios y plugins de terceros,
 incluyendo mantenimiento de servidor. Corrió en paralelo al puesto en Asta Software.
 
+### Pruebas técnicas entregadas — trátalas como casos de estudio, no como empleos
+
+Son trabajo mío, auditable, y en dos casos es la única evidencia que tengo de una tecnología. Preséntalas
+en su propia sección, claramente etiquetadas como pruebas técnicas y con la fecha. **No insinúes que
+obtuve el puesto en ninguna de las dos**: no tengo retroalimentación del evaluador en ninguna.
+
+**Agente conversacional por Telegram — CuatroD Studios** (entrevista 12 de junio de 2026; prueba construida
+del 15 al 18 de junio de 2026). Rol evaluado: *Automation / AI Workflow Builder*. Un agente en **n8n** que
+califica requisitos de servicio conversando por Telegram: 26 nodos, 4 tablas de persistencia, un catálogo de
+requisitos editable como datos y 13 páginas de documentación de arquitectura.
+
+Las tres decisiones que vale la pena contar, porque son las que un técnico va a querer discutir:
+
+- **Agrupar ráfagas sin colas ni bloqueos.** Cuando alguien escribe tres mensajes seguidos, el agente
+  responde una sola vez. Cada ejecución escribe su propio timestamp en una fila compartida por chat, espera
+  unos segundos y vuelve a leer: solo continúa la ejecución cuyo timestamp sigue siendo el más reciente. Las
+  ejecuciones paralelas se coordinan a través de los datos, sin infraestructura extra.
+- **Un contrato para la salida del LLM, con camino de falla.** La respuesta del modelo se valida contra ocho
+  campos obligatorios. Si el parseo falla o faltan campos, el flujo no se cae ni deja al usuario sin
+  respuesta: emite un mensaje de respaldo y marca el caso para revisión humana con la razón exacta. Dos
+  fallas típicas cerradas a propósito: el silencio, y que datos a medias lleguen a la memoria.
+- **Endurecer el prompt a partir de un error observado.** El modelo inventaba nombres de campo que no
+  existían en el catálogo. Se corrigió inyectando la lista exacta y cerrada de nombres válidos, derivada del
+  propio catálogo, más un ejemplo correcto y uno incorrecto tomado del error real. Después del ajuste el
+  modelo prefiere no registrar nada antes que adivinar.
+
+Además: deduplicación de webhooks por `chat_id + message_id`, memoria persistente por usuario entre turnos,
+integración con el LLM vía nodo HTTP genérico contra un endpoint compatible con OpenAI (cambiar de proveedor
+es cambiar una URL y una credencial, no la lógica), y rama de escalamiento a revisión humana con tabla de
+auditoría y alerta.
+
+**Cuidado con el enunciado:** la prueba es propiedad de CuatroD Studios. Puedo describir el sistema y mis
+decisiones; **no publiques el enunciado, el catálogo ni el export del workflow**, y no pongas capturas del
+canvas de n8n.
+
+**Prueba técnica de PHP/Laravel — LexCore / PoderJudicialVirtual** (agosto de 2026). Si construyes esta
+sección, pregúntame por los detalles antes de escribirla: es la evidencia más reciente de mi profundidad en
+Laravel y tiene matices que no quiero que resumas de memoria.
+
 ### Habilidades técnicas, agrupadas por fuerza de evidencia
 
 Preséntalas con esta honestidad; no las aplanes en una nube de tags donde todo parece igual de fuerte.
@@ -175,11 +214,16 @@ Preséntalas con esta honestidad; no las aplanes en una nube de tags donde todo 
   PostgreSQL, Socket.io, Tailwind, Docker.
 - **En desarrollo, exposición real pero más estrecha:** LangChain, LangGraph, Claude API, Python, Next.js,
   Redis, AWS S3, RxJS.
+- **Un proyecto completo, no años de uso — dilo así:** n8n. Un agente conversacional construido y
+  documentado de extremo a extremo (prueba de CuatroD Studios, junio de 2026). No lo pongas al lado de
+  PHP o TypeScript como si tuviera el mismo respaldo.
 - **Metodología:** agentic engineering como práctica central de desarrollo (Claude Code a diario,
   desarrollo guiado por especificación con Spec-kit, orquestación multiagente); flujo Git profesional con
   ramas, pull requests y code review; entornos Linux/Ubuntu, servicios contenerizados.
 - **Legacy / capaz de mantener:** Visual Basic 6.0, Firebird, Magento, Umbraco, WordPress, Ionic, DevExpress.
 - **Dominios:** arquitectura SaaS multitenant, sistemas en tiempo real, orquestación de IA en producción,
+  agentes conversacionales y automatización de flujos (debounce de ráfagas, idempotencia de webhooks, memoria
+  persistente por usuario, contratos de salida estructurada para LLM, escalamiento a revisión humana),
   ERP/RRHH/nómina, flujos de aprobación y requisiciones, integración de pasarelas de pago (PayPal, Conekta,
   OpenPay), almacén/logística/inventario, punto de venta y facturación electrónica.
 
@@ -222,6 +266,12 @@ en una conversación técnica.
    aportes míos, no lo presentes como trabajo propio.
 5. **Sin gestión de personas.** No tengo experiencia documentada liderando equipos. Nada de "lideré un
    equipo de X".
+7. **Las pruebas técnicas son trabajo entregado, no trabajo aprobado.** No tengo retroalimentación de
+   ningún evaluador. Nunca escribas "seleccionado", "superé la prueba" ni nada que sugiera un
+   resultado, y no las mezcles con la experiencia profesional: van en su propia sección, fechadas y
+   etiquetadas como pruebas técnicas.
+8. **n8n es un proyecto, no una trayectoria.** Es mi única evidencia en esa herramienta. Si el sitio
+   muestra niveles de habilidad, n8n no va junto a PHP ni a TypeScript.
 6. **Cuidado con el trabajo bajo NDA.** Los sistemas de MySourcing, BOZ IT, Batta y Asta son propiedad de
    esas empresas: puedo describir arquitectura, stack y mi responsabilidad, pero **no publicar código,
    capturas de pantalla ni nombres de clientes finales**. Preséntalos como casos de estudio narrados, no

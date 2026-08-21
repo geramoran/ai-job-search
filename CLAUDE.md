@@ -56,14 +56,23 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 ### Technical Skills
 - **Primary:** PHP/Laravel, TypeScript, ReactJS, Node.js/Express, VueJS, AngularJS, JavaScript/jQuery, C#/ASP.NET MVC, MySQL/MariaDB, SQL Server/T-SQL, PostgreSQL, Prisma ORM, Socket.io, Docker, HTML/CSS/Bootstrap/Tailwind
-- **Secondary:** LangChain, LangGraph, Claude API / LLM tool-calling, Python, Next.js, Redis, AWS S3, RxJS, Linux/Ubuntu, Magento, Umbraco, WordPress, Ionic, DevExpress, Visual Basic 6.0
-- **Domain:** Multitenant SaaS architecture, real-time systems, AI orchestration in production, ERP/HR/payroll, approval and requisition workflows, warehouse/logistics/inventory, point-of-sale and facturación electrónica, payment gateway integration
+- **Secondary:** LangChain, LangGraph, Claude API / LLM tool-calling, n8n (one complete agent workflow, see Verified Work Samples), Python, Next.js, Redis, AWS S3, RxJS, Linux/Ubuntu, Magento, Umbraco, WordPress, Ionic, DevExpress, Visual Basic 6.0
+- **Domain:** Multitenant SaaS architecture, real-time systems, AI orchestration in production, conversational agents and workflow automation (burst debouncing, webhook idempotency, structured LLM output contracts, escalation to human review), ERP/HR/payroll, approval and requisition workflows, warehouse/logistics/inventory, point-of-sale and facturación electrónica, payment gateway integration
 - **Methodology:** Agentic engineering as a core practice — **Claude Code** daily, Spec-driven Development (Spec-kit), multi-agent orchestration; professional Git workflow (branching, PRs, code review)
 
 ### Certifications
 - **Curso Completo: LangChain, LangGraph y Agentes IA con Python** (Udemy) - 18h - completed 4 May 2026
 - **EF SET English Certificate** - 41/100, B1 Intermediate - 23 May 2025
 - **Platzi** (signal subset of ~90 total): Claude AI ×2, Herramientas de AI para Developers, Prompt Engineering, Introducción al Desarrollo Backend, Fundamentos de Node.js, Docker ×2, Patrones de Diseño y Buenas Prácticas en PHP
+
+### Verified Work Samples
+- **LexCore / PoderJudicialVirtual assessment** (Aug 2026) — PHP/Laravel depth, graded externally
+- **CuatroD Studios assessment** (Jun 2026) — Telegram requirements-qualification agent in **n8n**: 26 nodes,
+  timestamp-based burst debounce, webhook deduplication, persistent per-user memory, an 8-field LLM output
+  contract with a forced human-escalation fallback, and a 13-page architecture document. Artifacts in
+  `prueba_tecnica/`. **No evaluator feedback received** — present as delivered, never as praised, and never
+  imply an outcome. Not spec-kit evidence.
+- Full detail for both lives in `.claude/skills/job-application-assistant/01-candidate-profile.md`
 
 ### Publications
 None.

@@ -262,6 +262,55 @@ apply a methodology is stronger signal than applying it everywhere.
 **Caveat:** no evaluator feedback has been received. Everything above is the candidate's own account plus
 the artifacts in the PR. Present it as work delivered, never as work praised.
 
+### CuatroD Studios technical assessment — Telegram requirements-qualification agent, June 2026
+**The only n8n evidence in the entire profile**, and the only conversational-agent system the candidate has
+built end to end outside an employer's codebase. Role evaluated: *Automation / AI Workflow Builder*.
+Technical interview 12 June 2026; assessment built 15-18 June 2026. Artifacts in `prueba_tecnica/`: the
+exported workflow, the requirements catalog, a 13-page architecture document and an installation README.
+
+**Measurable output:** one n8n workflow of **26 nodes** (9 Data Table, 8 Code, 2 IF, 2 Telegram send,
+1 trigger, 1 Wait, 1 HTTP Request, 1 Set), **4 persistence tables**, a 3-service requirements catalog as
+editable JSON, and documentation covering 12 real incidents with symptom/cause/solution plus 4 stated
+limitations.
+
+**What it demonstrates, concretely:**
+- **Debounce without queues or locks.** Burst grouping is solved by having every execution write its own
+  timestamp to a shared per-chat row, wait 6-8s, then re-read: only the execution whose timestamp still
+  matches the most recent write proceeds. Parallel executions coordinate through the data itself. This is
+  the strongest single piece of distributed-reasoning evidence in the profile.
+- **Idempotency designed in, not bolted on.** Dedup key `chat_id + message_id`, filtered with the Data
+  Table "If Row Does Not Exist" operation, and the seen-record insert placed *immediately* after the
+  filter specifically to shrink the race window on near-simultaneous webhook retries.
+- **A contract for LLM output, with a failure path.** The response is parsed and validated against eight
+  required fields in a Code node. On parse failure or missing fields the flow does not stop and does not
+  propagate partial data: it emits a fallback reply to the user and forces `requiereHumano: true` with a
+  reason. Two failure modes named and closed — silent no-reply, and half-valid data reaching memory.
+- **Provider-agnostic LLM integration.** Deliberately used the generic HTTP Request node against an
+  OpenAI-compatible chat-completions endpoint rather than n8n's native OpenAI node, so swapping providers
+  means changing a URL and a credential, not the flow logic. Credentials held in n8n's Header Auth store,
+  never inline in a node.
+- **Prompt hardening driven by an observed failure.** The model invented field names not in the catalog
+  (`nombre_completo_parcial` for `nombre_completo`). Fixed by injecting the exact closed list of valid
+  field names, derived dynamically from the catalog, plus one correct and one incorrect example taken from
+  the real error. After the change the model preferred registering nothing over guessing.
+- **Requirements modelled as editable data.** The 3-service catalog lives as JSON in a Set node, separate
+  from the prompt, so adding a service or a field needs no prompt rewrite and no Code node change — a
+  constraint the assignment set explicitly.
+- **Verified persistence empirically rather than assuming it.** Confirmed by experiment that the Data Table
+  Upsert does not null out previously stored fields when the incoming patch carries them empty, which is
+  what makes cross-turn memory work without manual merge logic.
+- **Human-escalation branch** writing to a `casos_escalados` audit table with review status, plus a
+  Telegram alert whose text is sanitized of characters Telegram would parse as broken markup.
+
+**Caveats:**
+- **No evaluator feedback received.** Everything above is the candidate's own account plus the artifacts on
+  file. Present it as work delivered, never as work praised, and do not imply an outcome.
+- The assessment brief itself is CuatroD Studios' property. Describe the system and the candidate's
+  decisions; do not republish the brief, the catalog or the workflow export.
+- **This is not spec-kit evidence.** No spec-driven artifacts exist in the deliverable. The
+  Spec-driven Development claim rests on MySourcing and this repo — see the LexCore entry, where declining
+  spec-kit was itself the documented decision.
+
 ## Compensation
 
 - **Accepted range, confirmed 2026-08-13:** PoderJudicialVirtual's published band of **$65,000-80,000 MXN
@@ -294,6 +343,9 @@ Grouped by strength of evidence, not by aspiration. Use these levels when writin
 ### Developing - real but narrower exposure
 - **LangChain / LangGraph** (Udemy course completed May 2026 + AI orchestration layer at MySourcing)
 - **Python**, **Claude API**, **Next.js**, **Redis**, **AWS S3**, **RxJS**
+- **n8n** — one complete conversational-agent workflow built and documented end to end (CuatroD Studios
+  assessment, June 2026): Data Tables, Code nodes, HTTP Request against an OpenAI-compatible endpoint,
+  Telegram trigger and send, Wait-based debounce. Single project, not years of use — say so.
 
 ### Methodology
 - **Agentic engineering as a core development practice**: Claude Code used daily, Spec-driven Development (Spec-kit), multi-agent orchestration
@@ -307,6 +359,8 @@ Grouped by strength of evidence, not by aspiration. Use these levels when writin
 - **Multitenant SaaS architecture** — per-company isolation, shared API hub
 - **Real-time systems** — Socket.io, live dashboards, cross-product messaging
 - **AI orchestration in production** — exposing product suites as LLM-callable tools
+- **Conversational agents / workflow automation** — burst debouncing, webhook idempotency, per-user
+  persistent memory, structured LLM output contracts, escalation to human review (n8n, CuatroD assessment)
 - **ERP / HR / payroll systems** — payroll calculation engines, personnel modules
 - **Approval and requisition workflows** — multi-level authorization, supplier management
 - **Payment gateway integration** — Stripe, PayPal, Conekta, OpenPay
