@@ -59,6 +59,17 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 - **Secondary:** LangChain, LangGraph, Claude API / LLM tool-calling, n8n (one complete agent workflow, see Verified Work Samples), Python, Next.js, Redis, AWS S3, RxJS, Linux/Ubuntu, Magento, Umbraco, WordPress, Ionic, DevExpress, Visual Basic 6.0
 - **Domain:** Multitenant SaaS architecture, real-time systems, AI orchestration in production, conversational agents and workflow automation (burst debouncing, webhook idempotency, structured LLM output contracts, escalation to human review), ERP/HR/payroll, approval and requisition workflows, warehouse/logistics/inventory, point-of-sale and facturación electrónica, payment gateway integration
 - **Methodology:** Agentic engineering as a core practice — **Claude Code** daily, Spec-driven Development (Spec-kit), multi-agent orchestration; professional Git workflow (branching, PRs, code review)
+  - **The Spec-kit claim is backed by CostoPreciso / CosteoMX** (see Independent Projects), not by MySourcing, which is real but under NDA with nothing showable
+
+### Independent Projects
+- **CostoPreciso / CosteoMX** (Jun 2026 - present) — multi-tenant costing SaaS for Mexican SMEs, built solo
+  and specification-first with **Spec-kit**: a written project constitution, 16 features through
+  spec/plan/tasks, 14,706 lines of specification, a deterministic TypeScript costing engine with **346
+  passing tests**, NestJS/Drizzle/PostgreSQL backend with row-level tenant isolation, React/Vite SPA,
+  deployed to an Ubuntu VPS on 18 Jul 2026. Repo `geramoran/saasconteo` is **private** — do not link it
+  anywhere until it is made public. Deployed, not launched: no users, no revenue, never imply traction.
+- **Elvira Richards** (2018) — elvirarichards.com.mx — WordPress talent page with a custom PHP theme
+- Full detail in `.claude/skills/job-application-assistant/01-candidate-profile.md`
 
 ### Certifications
 - **Curso Completo: LangChain, LangGraph y Agentes IA con Python** (Udemy) - 18h - completed 4 May 2026

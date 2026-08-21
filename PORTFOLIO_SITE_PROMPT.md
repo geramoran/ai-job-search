@@ -161,6 +161,40 @@ Presenta este rol en dos etapas, porque el arco importa:
 
 ### Proyecto independiente
 
+**CostoPreciso / CosteoMX** (junio de 2026 – en curso) — plataforma SaaS multi-tenant de costeo para PYMEs
+mexicanas de cualquier giro, construida en solitario. **Este es el proyecto que debe encabezar la sección de
+proyectos.** Es lo más reciente, lo más completo y lo único que respalda mi afirmación de desarrollo guiado
+por especificación.
+
+Lo que lo hace contable:
+
+- **Spec-kit aplicado en serio, no de adorno.** Una constitución del proyecto con principios NO NEGOCIABLES
+  (motor puro sin importar infraestructura, fórmulas deterministas y auditables trazables a su sección
+  numerada, vocabulario agnóstico al giro, multi-tenant desde el día cero) y **16 features** llevadas cada
+  una por spec → plan → tasks antes de escribir código. Casi **15,000 líneas de especificación**.
+- **Motor de costeo determinista en TypeScript** con **346 tests en verde**, separado por completo de la
+  infraestructura: funciones puras `(inputs) => resultado`, un archivo por sección de la especificación de
+  fórmulas.
+- **Backend NestJS + Drizzle + PostgreSQL** con aislamiento por tenant a nivel de fila, argon2, JWT y login
+  con Google. **Frontend React 18 + Vite** con Tailwind y shadcn/ui.
+- **Desplegado** el 18 de julio de 2026 en un VPS Ubuntu 24.04: Nginx, backend bajo systemd, PostgreSQL en
+  Docker.
+- Construido con **Claude Code** a diario como método de trabajo, no como autocompletado.
+
+**La historia que sí quiero contar, si el sitio tiene espacio para una:** el despliegue real destapó **seis
+bugs que la suite completa en verde no detectó**, porque ningún test ejercitaba producción de verdad —el
+arranque de inyección de dependencias de Nest, el bundle cargado por etiqueta script, estado de sesión que
+no era estado de React—. Los documenté uno por uno, incluida la reversión de un cambio de `manualChunks` que
+dejó la pantalla en blanco en producción. Prefiero que se lea eso a que se lea "100% de cobertura".
+
+**Restricciones, respétalas:**
+- **El repositorio es privado.** Su descripción en GitHub dice "open-source", pero hoy no lo es. **No pongas
+  enlace al repo** hasta que yo te confirme que ya lo hice público. Si no hay enlace, describe el proyecto
+  sin fingir que se puede inspeccionar.
+- **Está desplegado, no lanzado.** No hay usuarios, ni clientes, ni ingresos. El dominio costopreciso.com.mx
+  todavía no estaba registrado. **Nunca escribas nada que sugiera tracción, adopción o facturación.**
+- Es un proyecto en curso. Dilo así; no lo presentes como terminado.
+
 **Elvira Richards** (marzo – diciembre 2018) — www.elvirarichards.com.mx. Página de talento para la
 promotora Elvira Richards. WordPress con tema PHP a la medida, módulos propios y plugins de terceros,
 incluyendo mantenimiento de servidor. Corrió en paralelo al puesto en Asta Software.
@@ -220,6 +254,9 @@ Preséntalas con esta honestidad; no las aplanes en una nube de tags donde todo 
 - **Metodología:** agentic engineering como práctica central de desarrollo (Claude Code a diario,
   desarrollo guiado por especificación con Spec-kit, orquestación multiagente); flujo Git profesional con
   ramas, pull requests y code review; entornos Linux/Ubuntu, servicios contenerizados.
+  **Si el sitio afirma desarrollo guiado por especificación, tiene que apuntar a CostoPreciso**: es donde
+  hay constitución, 16 features por spec/plan/tasks y ~15,000 líneas de especificación. Lo de MySourcing
+  es real pero está bajo NDA y no puedo enseñarlo.
 - **Legacy / capaz de mantener:** Visual Basic 6.0, Firebird, Magento, Umbraco, WordPress, Ionic, DevExpress.
 - **Dominios:** arquitectura SaaS multitenant, sistemas en tiempo real, orquestación de IA en producción,
   agentes conversacionales y automatización de flujos (debounce de ráfagas, idempotencia de webhooks, memoria
@@ -261,7 +298,10 @@ en una conversación técnica.
    repartidores del proyecto ProntoForms, el aumento de cuota de distribuidores en Batta Hermanos (sin
    porcentaje, no lo tengo), y que el POS de Asta es hoy una de las principales líneas de ingreso de la
    empresa. Si necesitas un dato que no está en este documento, **pregúntame**.
-4. **No inventes proyectos ni repositorios.** Para la sección de proyectos, lee mi GitHub real en
+4. **No inventes proyectos ni repositorios.** Mi trabajo más fuerte de 2026 (CostoPreciso) está en un
+   repositorio **privado**, así que mi GitHub público no me representa: lo que se ve ahí son ejercicios de
+   curso y pruebas técnicas de 2021-2023. No enlaces repos privados, y no presentes los ejercicios viejos
+   como proyectos serios. Para la sección de proyectos, lee mi GitHub real en
    https://github.com/geramoran y usa únicamente lo que exista ahí. Si un repo está vacío o es un fork sin
    aportes míos, no lo presentes como trabajo propio.
 5. **Sin gestión de personas.** No tengo experiencia documentada liderando equipos. Nada de "lideré un

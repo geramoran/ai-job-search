@@ -322,6 +322,43 @@ limitations.
 - Availability stated to employers: **start the Monday after an offer is confirmed.**
 
 ## Independent Projects
+- **CostoPreciso / CosteoMX** (Jun 2026 - present) — `github.com/geramoran/saasconteo` (**currently private**).
+  Multi-tenant costing SaaS for Mexican SMEs of any sector, built solo. **This is the profile's real
+  Spec-driven Development evidence** — see the Methodology section, which points here.
+
+  **Verified on 2026-08-21 by inspecting the working tree, not from the candidate's account:**
+  - **Spec-kit used properly, at scale.** A written project constitution with NON-NEGOTIABLE principles
+    (pure engine with no infra imports, deterministic and auditable formulas traceable to a numbered
+    section of the costing spec, sector-agnostic vocabulary, multi-tenant from day zero), then **16
+    features** each taken through `spec.md` → `plan.md` → `tasks.md` before implementation. **14,706 lines
+    of specification** across 46 files. `docs/GUIA-SPECKIT.md` documents the workflow itself.
+  - **The specs precede the code and constrain it.** Constitution principle I is stated as a rule verifiable
+    by grep; the engine maps one file per numbered section of the formula spec, with the section reference
+    kept in the code comment.
+  - **346 passing tests across 22 files** in the costing engine (`npx vitest run`, re-run and confirmed
+    green on 2026-08-21), plus 11 backend and 29 frontend test files.
+  - **~25,000 lines of TypeScript** across 272 files. Backend NestJS + Drizzle ORM + PostgreSQL 16 with
+    row-level tenant isolation, argon2, JWT, Google auth, rate limiting. Frontend React 18 + Vite SPA with
+    Tailwind and shadcn/ui. 40 commits between 7 and 18 July 2026.
+  - **Deployed 18 July 2026** to an Ubuntu 24.04 VPS: Nginx, backend under systemd, PostgreSQL in Docker.
+  - **Precursor: `demo-costeo`** (8-16 June 2026) — the same Spec-kit method over 24 features and 8,746
+    lines of spec, where the costing domain was worked out before the SaaS was rebuilt around it.
+
+  **The best interview story in the whole profile:** the real deploy surfaced **six bugs that a fully green
+  test suite did not catch**, because no test exercised real production — Nest's DI boot, the bundle loaded
+  via a script tag, auth state that was not React state. He documented each one and the rollback of a
+  `manualChunks` change that white-screened production. This is honest evidence about the *limits* of
+  testing, which lands better than a clean-suite claim.
+
+  **Constraints when writing about it:**
+  - **The repo is private.** Its own GitHub description calls it "open-source", but it is not public. Do not
+    link it on a CV or the portfolio site until the candidate makes it public — see the note in Still
+    missing under References.
+  - **No users, no customers, no revenue.** It is deployed, not launched: the domain `costopreciso.com.mx`
+    is named in the deploy notes but was not yet registered as of 18 July 2026. Never imply traction.
+  - The root `README.md` "Estado del proyecto" section is **stale** — it lists most of the engine as pending
+    when 346 tests say otherwise. Trust `CLAUDE.md` and the test run, not that README.
+
 - **Elvira Richards** (Mar 2018 - Dec 2018) — www.elvirarichards.com.mx — talent page for promoter Elvira Richards. Built on WordPress with a custom PHP theme, custom modules, and third-party plugins. Included ongoing server maintenance. Ran in parallel with the Asta Software role.
 
 ## Technical Skills
@@ -348,7 +385,14 @@ Grouped by strength of evidence, not by aspiration. Use these levels when writin
   Telegram trigger and send, Wait-based debounce. Single project, not years of use — say so.
 
 ### Methodology
-- **Agentic engineering as a core development practice**: Claude Code used daily, Spec-driven Development (Spec-kit), multi-agent orchestration
+- **Agentic engineering as a core development practice**: Claude Code used daily, Spec-driven Development
+  (Spec-kit), multi-agent orchestration
+- **Where the Spec-driven Development claim is actually backed:** the CostoPreciso / CosteoMX project under
+  Independent Projects — a written constitution plus 16 features carried through spec/plan/tasks, 14,706
+  lines of specification, 346 passing engine tests. Cite that project, not MySourcing, when a posting asks
+  for evidence: the MySourcing work is real but sits behind an NDA with no artifacts to show.
+- **Judgment about when not to apply it** is separately evidenced in the LexCore assessment, where spec-kit
+  was declined with a written reason.
 - Professional Git workflow: branching, pull requests, code review
 - Linux/Ubuntu environments, containerized services
 
