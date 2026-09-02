@@ -103,7 +103,7 @@ None.
 - **Self-directed learning** - moved from PHP/Laravel to TypeScript/React and then into LLM orchestration inside a single employer
 - **Stack-agnostic pragmatism** - maintained a VB6 ERP in the same role where two hybrid mobile apps shipped
 - **Strengths:** Autonomy, architecture-through-deployment delivery, fast adoption of new tooling, integration-minded system design
-- **Growth areas:** Spoken/heard English (A2 listening), no documented people management, AI experience is applied orchestration rather than ML depth
+- **Growth areas:** Spoken/heard English (A2 listening), no line-management experience (assigned developer onboarding at MySourcing is the closest), AI experience is applied orchestration rather than ML depth
 - **Thrives in:** Small teams or solo ownership of a defined system, greenfield or actively evolving products, environments where AI tooling is welcomed
 
 ### What Excites You
@@ -129,7 +129,7 @@ automatically from your Languages table above - don't duplicate them here. -->
 - **Nine years** of experience (career starts Feb 2017), not the "5" or "6+" the older CV drafts claim
 - AI work is **orchestration and integration**, never model training, fine-tuning, evaluation, or MLOps
 - English is **B1 Intermediate** (reading B2). Never "fluent", "advanced", or "full professional"
-- No people-management claims; technical ownership only
+- No line-management claims: no hiring, headcount, performance reviews, or "led a team of X". **One confirmed exception (2026-09-02):** MySourcing formally assigned him the onboarding of new developers. Say exactly that and stop; it is technical mentoring, not management
 - **Overall positioning is Senior: nine years of production web development since February 2017, with PHP/Laravel as the deepest single thread.** This is the default framing on every CV and cover letter, and it is not up for negotiation by any single job entry. The archived letters state it outright ("nine years building production backends", "nine years of relational data work, starting in 2017")
 - **One scoped exception, about a 2019 job title only:** the Batta Hermanos entry reads "Analista de Desarrollo" with no seniority suffix, because the official constancia from 2019 says "Jr" and a CV should not contradict a document the employer may hold. This constrains **how that one 2019-2020 line is labelled** and says nothing about current seniority
 - Asta Software was a **Régimen de Incorporación Fiscal (contractor) engagement**, though a full-time in-house role. Don't call it freelance on a CV

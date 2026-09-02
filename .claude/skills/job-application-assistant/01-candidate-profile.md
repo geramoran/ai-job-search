@@ -121,6 +121,17 @@ doubles as the answer to "how much of your work does the AI do?".
 - Bug fixes and iterative improvements to the payroll calculation engine
 - Stack: JavaScript, Node.js, MySQL, AngularJS, RxJS, PHP, Laravel, Docker
 
+**Role-level responsibilities (imported from the candidate's Notion prep notes, confirmed 2026-09-02)**
+- Worked under **Scrum**
+- Worked within **ISO 27001-aligned security policies** on the platform. Claim it as working inside those
+  policies, never as owning a certification or running an audit, and expect the follow-up on which controls
+  actually touched his code
+- **Formally assigned responsibility for onboarding new developers** onto the system, after three-plus years
+  as its longest-serving developer: structured introduction to the architecture, progressive first tasks,
+  review and specific feedback on their work. **This is not people management** — no hiring, no headcount,
+  no performance evaluation, and it is never to be written as "led a team of X". STAR answer in
+  `10-star-bank.md` story 3
+
 **Reason for leaving (agreed interview line, confirmed by candidate 2026-08-12):** the separation was the
 company's decision, July 2026. Two developers covering several products; a disagreement with the owner over
 priorities and delivery timing. **Use this neutral one-line version in every interview and document, never a
@@ -153,6 +164,7 @@ Remote, Mexico
 - Logistics module: dispatch, receipt, and shipment management; PDF delivery manifests (DomPDF); full audit trail via status catalogue and unit log
 - ProntoForms webhook integration: real-time processing of GPS coordinates, field photos, and rejection reasons from mobile forms, with automated audit log
 - Automated Excel/PDF reports via cron jobs and Laravel Queue with scheduled email delivery; role-based access control, dark-mode UI
+- **Performance work in production (candidate-confirmed 2026-09-02):** profiled slow response times and peak-hour instability to heavy Eloquent use on high-frequency operations, and refactored those hot paths to **MySQL stored procedures**, moving the load off the PHP server. Full STAR answer in `10-star-bank.md` story 1. The trade-off he names himself is that the logic left the repository for the database
 - **Scale in production: 50-200 packages processed per day with 12 active couriers using the platform daily** (candidate-reported, 2026-08-07)
 
 **⚠ Figure drift — use one version and only one.** Two different sets of numbers for this platform are
@@ -192,6 +204,7 @@ Torreón, Coahuila, Mexico
   ProntoForms engagement starts November 2020. **October 2020 is correct.** Worth asking Batta HR for a
   corrected letter before any employment verification runs against it.
 - Analysed, developed, and deployed two mobile applications (Ionic + AngularJS), a website (Node.js + VueJS), and a web service (ASP.NET MVC Core + C#) to onboard voucher distributors and supervise field staff; measurably increased distributor quota and reduced processing times
+- **How the mobile work actually started (candidate-confirmed 2026-09-02):** the first app — for client-service staff uploading credit-authorisation prospects — was **inherited from an external vendor**, and he learned Ionic and AngularJS from scratch to adapt it and wire it to the .NET Core Web API, with no internal mobile team and nobody in-house to ask. He built the second app himself. Prep notes that describe coordinating with a "mobile team" here are wrong; see the quarantine list in `10-star-bank.md`
 - Maintained a store-support website for in-branch incident reporting (HTML, CSS, JavaScript, jQuery, PHP)
 - Maintained sensitive credit-area data directly in SQL Server (T-SQL) where ERP actions were unavailable
 - Maintained plugins for Batta Hermanos' VisCoi ERP system, written in Visual Basic 6.0

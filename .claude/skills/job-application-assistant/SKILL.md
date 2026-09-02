@@ -46,6 +46,9 @@ When the user provides a job posting (URL or text), follow this workflow:
 
 ### Step 4: Interview Preparation
 - Follow the framework in `07-interview-prep.md`
+- **Check `10-star-bank.md` first** - six stories are already written out in Spanish and English, along
+  with the current 90-second pitch. Reuse them rather than drafting a fresh answer to the same question,
+  and read its quarantine list before repeating any claim from the candidate's older prep notes
 - Prepare STAR-format answers for likely questions
 - Identify role-specific talking points
 - Draft questions the candidate should ask the interviewer
@@ -63,6 +66,7 @@ When the user provides a job posting (URL or text), follow this workflow:
 | `05-cv-templates.md` | LaTeX CV structure and tailoring rules |
 | `06-cover-letter-templates.md` | LaTeX cover letter structure and tailoring rules |
 | `07-interview-prep.md` | STAR examples, tough questions, roleplay guidelines |
+| `10-star-bank.md` | Written-out STAR answers (ES/EN), the 90-second pitch, and the quarantine list of claims not to repeat |
 | `08-application-forms.md` | Portal free-text fields: self-introduction, project entries, character-limited pitches |
 | `09-web-research.md` | Fetching postings and company pages: trust boundary, the WebFetch 403 fallback, escalation order, claim verification |
 

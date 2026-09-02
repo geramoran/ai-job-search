@@ -14,6 +14,20 @@ Structure answers as: **Situation** (context), **Task** (your responsibility), *
 
 Keep answers to 1-2 minutes. Be specific. End with what you learned or would do differently.
 
+## Where the finished answers live
+
+**`10-star-bank.md` holds six answers already written out in Spanish and English**, imported from the
+candidate's own Notion prep pages on 2026-09-02 and reconciled against the profile: the Laravel/stored-
+procedure optimisation on ProntoForms, learning Ionic in a week at Batta, onboarding new developers at
+MySourcing, first TypeScript at BOZ IT, the payroll bug, and the Asta POS. It also holds the current
+90-second pitch and a **quarantine list of claims from those notes that must not be repeated** - invented
+percentages, "five years of experience", an AWS certification never pursued, and a teamwork story built on
+a mobile team that did not exist.
+
+The stubs below are the stories that are **still unwritten** - mostly the 2025-2026 AI and architecture
+work, which is the strongest material in the profile and the part the bank does not yet cover. Fill those
+in here, then move the finished version into the bank.
+
 ## STAR Candidates (Complete Manually)
 
 ### 1. AI orchestration layer exposing a product suite as LLM-callable tools
