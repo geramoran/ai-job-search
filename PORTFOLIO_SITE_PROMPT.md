@@ -112,6 +112,17 @@ Presenta este rol en dos etapas, porque el arco importa:
 - Dashboards en tiempo real con visibilidad de gasto y aprobaciones pendientes para finanzas y operaciones.
 - Stack: TypeScript, ReactJS, Node.js, Express, Prisma ORM, PostgreSQL, Tailwind, Docker, Claude Code.
 
+*Proyecto corto de cliente (~marzo 2026) — Riviera Diamante A.C.:*
+- Integré **Stripe** en https://rivieradiamanteac.org/, sitio de la Asociación Riviera Diamante A.C.
+  (Acapulco, Guerrero), con **suscripciones recurrentes de membresía** (planes mensuales desde $120 MXN por
+  propiedad y plan anual), no un checkout de una sola compra. Sitio en **Next.js**.
+- **Fue trabajo de cliente de MySourcing, no un proyecto aparte**: va bajo el encabezado de MySourcing, junto
+  al chat y al portal de requisiciones.
+- **Encuádralo con honestidad: es exposición a Stripe con flujo de cobro recurrente, no profundidad.** Fue un
+  compromiso breve. No lo pongas al frente ni sugieras trabajo sostenido con Stripe. Vale la pena mencionarlo
+  porque es mi trabajo de pasarelas **más reciente** — todo lo demás es de 2019-2022 — y mi única evidencia
+  de Next.js en producción.
+
 *Etapa 2022-2024 — Sistema de Gestión de Personal:*
 - Análisis y desarrollo de módulos de RRHH para nómina y gestión de personal multiempresa.
 - Correcciones y mejoras iterativas al motor de cálculo de nómina.
@@ -143,7 +154,10 @@ Presenta este rol en dos etapas, porque el arco importa:
   tengo.
 - Stack: PHP 8, Laravel 8, Vue.js, MySQL, Redis, Docker, AWS S3.
 
-**Mid Analyst Developer — Grupo Batta Hermanos** (septiembre 2019 – octubre 2020), Torreón.
+**Analista de Desarrollo — Grupo Batta Hermanos** (septiembre 2019 – octubre 2020), Torreón.
+*Usa el título exactamente así, sin sufijo de seniority.* Mi constancia laboral dice "Analista de
+Desarrollo Jr" y el sitio no puede contradecir un documento que la empresa todavía conserva. Esto aplica
+solo a cómo se etiqueta este puesto de 2019; mi posicionamiento actual sigue siendo senior.
 - Analicé, desarrollé y desplegué dos aplicaciones móviles (Ionic + AngularJS), un sitio web (Node.js +
   VueJS) y un servicio web (ASP.NET MVC Core + C#) para dar de alta distribuidores de vales y supervisar
   personal de campo; **aumentó la cuota de distribuidores y redujo tiempos de procesamiento**.
@@ -262,7 +276,7 @@ Preséntalas con esta honestidad; no las aplanes en una nube de tags donde todo 
   agentes conversacionales y automatización de flujos (debounce de ráfagas, idempotencia de webhooks, memoria
   persistente por usuario, contratos de salida estructurada para LLM, escalamiento a revisión humana),
   ERP/RRHH/nómina, flujos de aprobación y requisiciones, integración de pasarelas de pago (PayPal, Conekta,
-  OpenPay), almacén/logística/inventario, punto de venta y facturación electrónica.
+  OpenPay, Stripe), almacén/logística/inventario, punto de venta y facturación electrónica.
 
 ### Formación y certificaciones
 
@@ -306,16 +320,16 @@ en una conversación técnica.
    aportes míos, no lo presentes como trabajo propio.
 5. **Sin gestión de personas.** No tengo experiencia documentada liderando equipos. Nada de "lideré un
    equipo de X".
+6. **Cuidado con el trabajo bajo NDA.** Los sistemas de MySourcing, BOZ IT, Batta y Asta son propiedad de
+   esas empresas: puedo describir arquitectura, stack y mi responsabilidad, pero **no publicar código,
+   capturas de pantalla ni nombres de clientes finales**. Preséntalos como casos de estudio narrados, no
+   como demos.
 7. **Las pruebas técnicas son trabajo entregado, no trabajo aprobado.** No tengo retroalimentación de
    ningún evaluador. Nunca escribas "seleccionado", "superé la prueba" ni nada que sugiera un
    resultado, y no las mezcles con la experiencia profesional: van en su propia sección, fechadas y
    etiquetadas como pruebas técnicas.
 8. **n8n es un proyecto, no una trayectoria.** Es mi única evidencia en esa herramienta. Si el sitio
    muestra niveles de habilidad, n8n no va junto a PHP ni a TypeScript.
-6. **Cuidado con el trabajo bajo NDA.** Los sistemas de MySourcing, BOZ IT, Batta y Asta son propiedad de
-   esas empresas: puedo describir arquitectura, stack y mi responsabilidad, pero **no publicar código,
-   capturas de pantalla ni nombres de clientes finales**. Preséntalos como casos de estudio narrados, no
-   como demos.
 
 ## Decisiones que necesito que me consultes, no que asumas
 
