@@ -14,7 +14,8 @@ framework_version: 1.0.0
 - **LinkedIn:** https://www.linkedin.com/in/geramoran/
 - **GitHub:** https://github.com/geramoran
 - **Languages:** Spanish (native); English B1 Intermediate — see Language Evidence below
-- **Status:** Actively job seeking since August 2026 (MySourcing role ended July 2026)
+- **Status:** Actively job seeking since August 2026 (MySourcing role ended July 2026), while running a
+  direct freelance engagement for a private client (CostoPreciso — see Freelance Client Work)
 - **Professional licence:** Cédula Profesional 12320388 (SEP, Dirección General de Profesiones), issued 31 May 2021, verifiable at gob.mx/cedulaprofesional
 - **Constraints:** Open to remote (Mexico/LatAm and international), hybrid in Torreón, and relocation to another Mexican city. Not open to fully on-site 5 days/week.
 - **CV language:** Both — English for remote-international postings, Spanish for Mexico/LatAm postings
@@ -334,10 +335,18 @@ limitations.
   contracts, where the market differs.
 - Availability stated to employers: **start the Monday after an offer is confirmed.**
 
-## Independent Projects
+## Freelance Client Work
+
 - **CostoPreciso / CosteoMX** (Jun 2026 - present) — `github.com/geramoran/saasconteo` (**currently private**).
-  Multi-tenant costing SaaS for Mexican SMEs of any sector, built solo. **This is the profile's real
-  Spec-driven Development evidence** — see the Methodology section, which points here.
+  Multi-tenant costing SaaS for Mexican SMEs of any sector, built as **sole developer**. **This is the
+  profile's real Spec-driven Development evidence** — see the Methodology section, which points here.
+
+  **Engagement, corrected by the candidate on 2026-09-02:** this is a **direct freelance engagement for a
+  client**, not a personal product and not MySourcing client work. Earlier drafts of this file, of
+  `CLAUDE.md`, of the portfolio prompt and of the site filed it under independent/personal projects; that
+  was wrong. On a CV it belongs in **professional experience** as a freelance entry (2026 - present, "private
+  client", remote), where it also covers the period since MySourcing ended in July 2026.
+  **Do not name the client** — the candidate has not authorized it. Write "a private client".
 
   **Verified on 2026-08-21 by inspecting the working tree, not from the candidate's account:**
   - **Spec-kit used properly, at scale.** A written project constitution with NON-NEGOTIABLE principles
@@ -367,10 +376,14 @@ limitations.
   - **The repo is private.** Its own GitHub description calls it "open-source", but it is not public. Do not
     link it on a CV or the portfolio site until the candidate makes it public — see the note in Still
     missing under References.
-  - **No users, no customers, no revenue.** It is deployed, not launched: the domain `costopreciso.com.mx`
-    is named in the deploy notes but was not yet registered as of 18 July 2026. Never imply traction.
+  - **In development, not yet handed over to the client** (candidate, 2026-09-02). It is deployed to a VPS,
+    not launched: no users, no operation running on it, no revenue, and the domain `costopreciso.com.mx`
+    is named in the deploy notes but was not yet registered as of 18 July 2026. Never imply traction, and
+    never say it was delivered.
   - The root `README.md` "Estado del proyecto" section is **stale** — it lists most of the engine as pending
     when 346 tests say otherwise. Trust `CLAUDE.md` and the test run, not that README.
+
+## Independent Projects
 
 - **Elvira Richards** (Mar 2018 - Dec 2018) — www.elvirarichards.com.mx — talent page for promoter Elvira Richards. Built on WordPress with a custom PHP theme, custom modules, and third-party plugins. Included ongoing server maintenance. Ran in parallel with the Asta Software role.
 

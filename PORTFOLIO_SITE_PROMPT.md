@@ -173,12 +173,13 @@ solo a cómo se etiqueta este puesto de 2019; mi posicionamiento actual sigue si
 - Sitios dinámicos en PHP y Laravel para varios clientes.
 - E-commerce sobre el framework Aimeos (PHP/Laravel), integrando pasarelas PayPal y Conekta.
 
-### Proyecto independiente
+### Proyecto freelance para cliente
 
 **CostoPreciso / CosteoMX** (junio de 2026 – en curso) — plataforma SaaS multi-tenant de costeo para PYMEs
-mexicanas de cualquier giro, construida en solitario. **Este es el proyecto que debe encabezar la sección de
-proyectos.** Es lo más reciente, lo más completo y lo único que respalda mi afirmación de desarrollo guiado
-por especificación.
+mexicanas de cualquier giro, construida por mí como desarrollador único. **Es trabajo freelance para un
+cliente, no un producto propio, y el cliente no se nombra.** **Este es el proyecto que debe encabezar la
+sección de proyectos.** Es lo más reciente, lo más completo y lo único que respalda mi afirmación de
+desarrollo guiado por especificación.
 
 Lo que lo hace contable:
 
@@ -205,8 +206,10 @@ dejó la pantalla en blanco en producción. Prefiero que se lea eso a que se lea
 - **El repositorio es privado.** Su descripción en GitHub dice "open-source", pero hoy no lo es. **No pongas
   enlace al repo** hasta que yo te confirme que ya lo hice público. Si no hay enlace, describe el proyecto
   sin fingir que se puede inspeccionar.
-- **Está desplegado, no lanzado.** No hay usuarios, ni clientes, ni ingresos. El dominio costopreciso.com.mx
-  todavía no estaba registrado. **Nunca escribas nada que sugiera tracción, adopción o facturación.**
+- **Está desplegado en un VPS, no lanzado ni entregado al cliente.** No hay usuarios, ni operación encima,
+  ni ingresos. El dominio costopreciso.com.mx todavía no estaba registrado. **Nunca escribas nada que
+  sugiera tracción, adopción, facturación ni entrega.**
+- **No nombres al cliente.** Escribe "un cliente" o "un cliente privado".
 - Es un proyecto en curso. Dilo así; no lo presentes como terminado.
 
 **Elvira Richards** (marzo – diciembre 2018) — www.elvirarichards.com.mx. Página de talento para la

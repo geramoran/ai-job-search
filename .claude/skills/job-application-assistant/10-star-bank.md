@@ -265,7 +265,8 @@ suite de la empresa como herramientas que un modelo puede invocar. Ahí es donde
 interesante: no entrenar modelos, sino el lugar donde la salida de un modelo tiene consecuencias reales,
 con permisos, aislamiento por empresa y manejo de fallos.
 
-En paralelo construí solo CostoPreciso, un SaaS de costeo para PYMEs, especificación primero con Spec-kit:
+En paralelo construyo CostoPreciso como freelance para un cliente, un SaaS de costeo para PYMEs, yo solo y
+con especificación primero usando Spec-kit:
 un motor determinista en TypeScript con 346 pruebas en verde, desplegado en julio. Trabajo con Claude Code
 todos los días como método, no como autocompletado.
 
@@ -282,8 +283,9 @@ company's products as tools an LLM can call. That is the work I find most intere
 models. The place where a model's output has real consequences: permissions, tenant isolation, and what
 happens when it calls the wrong thing.
 
-At the same time, I built CostoPreciso on my own, a costing SaaS for small Mexican companies. I built it
-specification first, with a deterministic TypeScript engine and 346 passing tests. I deployed it in July.
+At the same time, I have been building CostoPreciso as a freelance developer for a client, a costing SaaS
+for small Mexican companies. I am the only developer on it, and I built it specification first, with a
+deterministic TypeScript engine and 346 passing tests. I deployed it in July.
 I use Claude Code every day as a working method, not as autocomplete.
 
 I'm looking for a role where I can keep bringing models into real products and own a system end to end."
