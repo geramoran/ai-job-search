@@ -72,10 +72,11 @@ Expected output: `Output written on main_<company>_<role>.pdf (2 pages, ...)`. A
 \name{Jose Gerardo}{Mart\'inez Mor\'an}
 % If you have no address to list, DELETE this whole line. \address{}{}{} fails
 % with "There's no line here to end" on every moderncv version.
-\address{Torre\'on, Coahuila, M\'exico}{}{}
+\address{Lerdo, Durango, M\'exico}{}{}
 \phone[mobile]{(+52) 871-310-7796}
 \email{geramtz100@gmail.com}
-\extrainfo{\href{https://www.linkedin.com/in/geramoran/}{LinkedIn}, \href{https://github.com/geramoran}{GitHub}}
+\extrainfo{\href{https://www.linkedin.com/in/geramoran/}{LinkedIn}, \href{https://github.com/geramoran}{GitHub}, \href{https://geramoran.github.io}{Portafolio}}
+% Portafolio = geramoran.github.io. Label it "Portafolio" on Spanish CVs and "Portfolio" on English CVs.
 
 \begin{document}
 \makecvtitle
@@ -166,6 +167,8 @@ role — you'll apply LLMs, not train them"), or when the CV is running long. Cl
 > Ingeniero backend con nueve años de experiencia en producción, cinco de ellos construyendo y manteniendo sistemas PHP/Laravel en dominios de e-commerce, logística, nómina y punto de venta. Como desarrollador único diseñé y desplegué una plataforma completa de gestión de almacén y entregas sobre PHP 8 y Laravel 8, cubriendo control de inventario con conteos ciegos y reporte automático de discrepancias, logística de despacho y embarques con trazabilidad completa, integración de webhooks de ProntoForms procesando GPS y fotos de campo en tiempo real, y reportería programada con cron jobs y Laravel Queue. Sólido en optimización de consultas e indexado en MySQL, integración de pasarelas de pago y despliegue con Docker.
 
 ### Honesty guardrails for this candidate
+
+**Experience ends at MySourcing (candidate rule, 2026-10-16, every CV from now on).** The top entry of Professional Experience is MySourcing (May 2022 - Jul 2026). Never add a "present" role, a freelance client or the CostoPreciso/CosteoMX engagement above it; the candidate has no active job. Do not borrow details that exist only in that project (NestJS, Drizzle, JWT, row-level isolation, the costing engine) and attribute them to MySourcing or to the skills section as job experience. Older CVs in `cv/` that still carry the entry are history, not templates.
 
 Three claims recur across the archived CVs and must be checked every time:
 
@@ -343,7 +346,7 @@ Two independent causes, both easy to avoid:
 
    This applies to the **date argument only**. Keep `--` everywhere it is typographically correct in prose, for example a numeric range like `EUR 600k--1M`.
 
-2. **A bare single year gives the parser no end date.** A short contract, mandate or internship written as `\cventry{2016}` imports as a start date with nothing to close it. Use an explicit range, with months where the role ran under a year:
+2. **A bare single year gives the parser no end date. STRICT RULE, no exceptions: never write a `\cventry` date argument as a single bare year.** Every entry on every CV, present and future, must be either a year range (`2022-2026`) or, when the role ran under one calendar year, an explicit month-year range. This failed in production: nine different tailored CVs independently carried `\cventry{2022}` for the 4-month BOZ IT role (Jan-Apr 2022) before being caught and fixed on 2026-11-02 — the same single-line bug had been copy-pasted across every CV generated since. Before writing or copying any `\cventry` line, check its date argument for this pattern; before presenting a CV to the user, grep the file for `cventry{[0-9][0-9][0-9][0-9]}` (bare 4-digit year immediately after the opening brace) and fix any hit. A short contract, mandate or internship written as `\cventry{2016}` imports as a start date with nothing to close it. Use an explicit range, with months where the role ran under a year:
 
    ```latex
    \item{\cventry{Mar 2016 - Jul 2016}{Contract Role}{Client}{Location}{}{...}}

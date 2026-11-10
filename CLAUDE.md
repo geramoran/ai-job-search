@@ -17,8 +17,8 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 ### Identity
 - **Name:** Jose Gerardo Martínez Morán
-- **Location:** Torreón, Coahuila, Mexico (GMT-6). Open to remote (Mexico/LatAm and international), hybrid locally, and relocation within Mexico. Not open to fully on-site 5 days/week.
-- **Contact:** geramtz100@gmail.com · (+52) 871-310-7796 · [LinkedIn](https://www.linkedin.com/in/geramoran/) · [GitHub](https://github.com/geramoran)
+- **Location:** Lerdo, Durango, Mexico, in the La Laguna area next to Torreón (GMT-6; he actually lives in Lerdo, corrected by the candidate 2026-10-22; older CVs and letters say Torreón and are left as they are; every NEW CV and letter uses Lerdo, Durango in the header and says "Lerdo" when it mentions where he lives). Open to remote (Mexico/LatAm and international), hybrid locally, and relocation within Mexico. Not open to fully on-site 5 days/week, **except in the Monterrey metro area, specifically Apodaca, N.L.**, where he is willing to relocate and work fully on-site (candidate, 2026-10-20).
+- **Contact:** geramtz100@gmail.com · (+52) 871-310-7796 · [LinkedIn](https://www.linkedin.com/in/geramoran/) · [GitHub](https://github.com/geramoran) · [Portfolio](https://geramoran.github.io)
 - **Languages:**
   | Language | Level |
   |----------|-------|
@@ -39,13 +39,14 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 ### Professional Experience
 - **Full-Stack Web & AI Developer Senior** (May 2022 - Jul 2026) - **MySourcing** (Acapulco de Juárez, Guerrero — remote)
   - Built an **AI orchestration layer** exposing the company's product suite as tools callable by an LLM
-  - Architected a multitenant, end-to-end encrypted real-time chat platform acting as a unified API hub across products (TypeScript, React, Node.js, Socket.io, Prisma, PostgreSQL)
-  - Built a full purchase-requisition lifecycle portal: multi-level authorization, supplier management, payment tracking, real-time dashboards
+  - Architected (solo) a multitenant real-time chat platform with end-to-end encryption between chats and for files, acting as a unified API hub across products (TypeScript, React, Node.js, Socket.io, Prisma, PostgreSQL), built with Spec-kit. A planned MCP server to adapt it to multiple sites was design intent, not shipped
+  - Co-built, with a second developer who contributed part of the frontend and the database, a purchase-requisition lifecycle portal: multi-level authorization, supplier management, payment tracking, real-time dashboards (his: architecture, API, part of the UI)
   - 2022-2024: HR/payroll modules and payroll calculation engine (PHP, Laravel, AngularJS, MySQL)
 - **Desarrollador Fullstack Mid TypeScript** (Jan 2022 - Apr 2022) - **BOZ IT Development**
   - Payroll (nóminas) and financial projection system modules with complex transactional logic (TypeScript, Node.js, SQL Server, DevExpress)
-- **Webmaster Developer** (Jul 2021 - Jan 2022) - **Basculas REVUELTA** (Torreón)
+- **Webmaster Developer** (Jul 2021 - Jan 2022) - **Grupo Revuelta** (Torreón; not "Basculas REVUELTA", corrected by the candidate 2026-10-16)
   - Group websites on ASP.NET MVC, Umbraco, AngularJS; Magento e-commerce administration and custom PHP plugins
+  - New **.NET 6 / EF Core 6 APIs** (started on .NET 5 / EF Core 5, migrated Nov 2021) connecting to Umbraco and Magento (candidate, 2026-10-16)
 - **Freelance Full-Stack Developer** (Nov 2020 - Jun 2021) - **ATT / ProntoForms project** (remote)
   - Sole developer: full warehouse, inventory and delivery-logistics platform, architecture through production (PHP 8, Laravel 8, Vue.js, MySQL, Redis, Docker, AWS S3)
 - **Analista de Desarrollo (Analyst Developer)** (Sep 2019 - Oct 2020) - **Grupo Batta Hermanos** (Torreón)
@@ -56,11 +57,14 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
   - E-commerce on Aimeos (PHP/Laravel) with PayPal and Conekta gateways
 
 ### Technical Skills
-- **Primary:** PHP/Laravel, TypeScript, ReactJS, Node.js/Express, VueJS, AngularJS, JavaScript/jQuery, C#/ASP.NET MVC, MySQL/MariaDB, SQL Server/T-SQL, PostgreSQL, Prisma ORM, Socket.io, Docker, HTML/CSS/Bootstrap/Tailwind
+- **Primary:** PHP/Laravel (up to Laravel 11, MySourcing payroll upgrade, unit tests with PHPUnit — candidate 2026-11-03), TypeScript, ReactJS, Node.js/Express, VueJS, Angular (2+, versions 20 and 21, MySourcing, 1+ yr in
+  production — confirmed 2026-10-06; v21 in a Laravel 11 monolith, 2026-11-03) and AngularJS (1.x; keep the two distinct), JavaScript/jQuery, C#/ASP.NET MVC, ASP.NET Core 6 + EF Core 6 (Revuelta, one project, late 2021), MySQL/MariaDB, SQL Server/T-SQL, PostgreSQL, Prisma ORM, Socket.io, Docker, HTML/CSS/Bootstrap/Tailwind
 - **Secondary:** LangChain, LangGraph, Claude API / LLM tool-calling, n8n (one complete agent workflow, see Verified Work Samples), Python, Next.js, Redis, AWS S3, RxJS, Linux/Ubuntu, Magento, Umbraco, WordPress, Ionic, DevExpress, Visual Basic 6.0
+- **Design patterns:** MVC, Singleton, Factory, Strategy, Decorator, Observer — applied knowledge, backed by the Platzi *Patrones de Diseño y Buenas Prácticas en PHP* course (Sep 2024)
+- **IT support, paid per service (corrected 2026-10-12):** since 2019, on-demand technical support for the law firm of Dr. Ricardo Ramírez Murillo (Torreón): Windows diagnosis, formatting, software installation and troubleshooting; hardware upgrades, component replacement and preventive maintenance; installing and supporting the office network and internet for PCs, printers and cameras; client service. Paid per service, part-time alongside his development jobs. Usable on support / helpdesk / customer-service CVs. It is small-office support, **not** enterprise sysadmin: no Windows Server, Active Directory, firewall/VPN administration. Smartphone repair and electronics modding remain hobby level
 - **Domain:** Multitenant SaaS architecture, real-time systems, AI orchestration in production, conversational agents and workflow automation (burst debouncing, webhook idempotency, structured LLM output contracts, escalation to human review), ERP/HR/payroll, approval and requisition workflows, warehouse/logistics/inventory, point-of-sale and facturación electrónica, payment gateway integration
 - **Methodology:** Agentic engineering as a core practice — **Claude Code** daily, Spec-driven Development (Spec-kit), multi-agent orchestration; professional Git workflow (branching, PRs, code review)
-  - **The Spec-kit claim is backed by CostoPreciso / CosteoMX** (see Freelance Client Work), not by MySourcing, which is real but under NDA with nothing showable
+  - **Spec-kit was used at MySourcing on the latest projects, including the chat platform** (candidate, 2026-10-20), under NDA with nothing showable. The showable evidence is CostoPreciso / CosteoMX (see Freelance Client Work), which never appears as a CV role
 
 ### Freelance Client Work
 - **CostoPreciso / CosteoMX** (Jun 2026 - present) — **direct freelance engagement for a client, confirmed
@@ -72,8 +76,9 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
   row-level tenant isolation, React/Vite SPA, deployed to an Ubuntu VPS on 18 Jul 2026. Repo
   `geramoran/saasconteo` is **private** — do not link it anywhere until it is made public. **Status:
   in development, not yet handed over to the client** — no users, no revenue, never imply traction or
-  delivery. It doubles as the current-activity entry on the CV, filling the gap since MySourcing ended in
-  July 2026.
+  delivery. **CV rule (candidate, 2026-10-16): it is NOT listed as an experience entry on any CV.** The
+  last job on every CV is MySourcing; after it there is no active job and nothing is added. The work may
+  back a skill (Spec-kit, spec-first method) in competencies, never as a role, client or "present" entry.
 
 ### Independent Projects
 - **Elvira Richards** (2018) — elvirarichards.com.mx — WordPress talent page with a custom PHP theme
@@ -102,6 +107,7 @@ None.
 ### References
 - Two *constancias laborales* on file in `documents/references/` (Asta, Batta). **Employment-verification letters, not recommendations** — never attach them to an application
 - Only usable referee: **Lic. José Antonio Vázquez Gómez**, Gerente de Sistemas, Asta Software (contact details not yet recorded)
+- **Dr. Ricardo Ramírez Murillo**, abogado, Torreón — character recommendation letter (`documents/references/gera-recomendacion-drRamirez.pdf`, dated 10 Oct 2019 or 2016, stamp covers the year). The letter is a **personal recommendation** and does not describe the IT work; he is also the IT-support client since 2019. Candidate approved listing him with the office phone (871) 204-04-50 (2026-10-12)
 - **No referee from MySourcing**, the four-year most recent role. Biggest gap in the reference package
 - CVs say "More references are available upon request" and name nobody without prior consent
 
@@ -128,12 +134,13 @@ None.
 ### Deal-breakers
 <!-- Hard constraints on job search. Language requirements are handled separately and
 automatically from your Languages table above - don't duplicate them here. -->
-- Fully on-site 5 days/week with no hybrid option
+- Fully on-site 5 days/week with no hybrid option (exception: Monterrey metro / Apodaca, N.L., where relocation and on-site work are acceptable; candidate, 2026-10-20)
 - Night on-call rotation or 24/7 support duty
 - Pure legacy maintenance with no new development
 - Body-shop staffing consultancies renting developers by the hour to a final client (cárnicas)
 
 ### Honesty guardrails (check on every document)
+- **CVs and cover letters: the last job is MySourcing (May 2022 - Jul 2026).** No "present" role, no freelance client, no CostoPreciso/CosteoMX as work experience or as "sole developer of a SaaS for a private client" (candidate rule, 2026-10-16, applies to every future CV and letter)
 - **Nine years** of experience (career starts Feb 2017), not the "5" or "6+" the older CV drafts claim
 - AI work is **orchestration and integration**, never model training, fine-tuning, evaluation, or MLOps
 - English is **B1 Intermediate** (reading B2). Never "fluent", "advanced", or "full professional"
@@ -196,6 +203,7 @@ Both documents MUST be compiled and visually inspected via the Read tool on the 
 
 ### ATS & keyword verification (CV)
 ATS parsers read the PDF's embedded text layer, not the rendered page. Extract it with `python tools/verify_pdf.py cv/main_<company>_<role>.pdf --dump-text cv/main_<company>_<role>.txt` (pypdf, then `pdftotext -layout -enc UTF-8`) and verify what a parser sees. If both extractors are missing, skip the parseability items with a warning and check keyword coverage from the visual PDF read instead.
+- [ ] **No bare single-year `\cventry` dates** - every entry is a year range (`2022-2026`) or, for roles under one calendar year, an explicit month-year range (`Jan 2022 - Apr 2022`). Grep for `cventry{[0-9][0-9][0-9][0-9]}` before presenting any CV; see `05-cv-templates.md` "Date fields must be ASCII ranges" (STRICT RULE, no exceptions - this exact bug shipped on nine CVs before being caught on 2026-11-02)
 - [ ] CV text layer extracts cleanly - no `(cid:*)` markers, `�` replacement characters, or text visible in the PDF but absent from the extraction
 - [ ] Email and phone appear as **literal text** in the extraction (icon-glyph noise like `MOBILE-ALT`/`Envelope` is harmless, but a contact detail carried only by an icon or hyperlink is invisible to ATS)
 - [ ] Reading order of the extracted text matches the visual order (single-column stock template is safe; multi-column custom templates are where this breaks)

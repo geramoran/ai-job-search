@@ -76,7 +76,7 @@ The font wrapper is mandatory — if you just move `\begin{itemize}` outside `\l
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     TITLE NAME
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\namesection{}{\Huge{Jose Gerardo Mart\'inez Mor\'an}}{  \href{mailto:geramtz100@gmail.com}{geramtz100@gmail.com} | (+52) 871-310-7796 |  \urlstyle{same}\href{https://www.linkedin.com/in/geramoran/}{LinkedIn}
+\namesection{}{\Huge{Jose Gerardo Mart\'inez Mor\'an}}{  \href{mailto:geramtz100@gmail.com}{geramtz100@gmail.com} | (+52) 871-310-7796 |  \urlstyle{same}\href{https://www.linkedin.com/in/geramoran/}{LinkedIn} | \href{https://geramoran.github.io}{Portafolio}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -207,6 +207,8 @@ Three letters, one repeated skeleton. Follow it unless the posting demands other
 7. Method       - Claude Code + spec-driven development, tied to a need they stated
 8. Close        - "I look forward to hearing from you." / "Kind regards,"
 ```
+
+> **Overrides from the candidate (2026-10-04):** end the gap paragraph after the boundary, with **no** closing "better you hear it now / prefiero que lo sepan ahora" sentence, and **never cite the 346-test count** in a letter or CV. See `03-writing-style.md`. The worked examples below predate this and still show the old closing line; do not copy it.
 
 ### The gap paragraph (mandatory for this candidate)
 

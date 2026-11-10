@@ -8,17 +8,20 @@ framework_version: 1.0.0
 
 ## Identity
 - **Name:** Jose Gerardo Martínez Morán
-- **Location:** Torreón, Coahuila, Mexico (GMT-6, no DST)
+- **Location:** Lerdo, Durango, Mexico, in the La Laguna area next to Torreón (GMT-6, no DST). Corrected by the candidate 2026-10-22; older documents say Torreón and are left as they are.
 - **Phone:** (+52) 871-310-7796
 - **Email:** geramtz100@gmail.com
 - **LinkedIn:** https://www.linkedin.com/in/geramoran/
 - **GitHub:** https://github.com/geramoran
+- **Portfolio site:** https://geramoran.github.io (live; Spanish at the root, English at /en/). **Include it in the contact line of every CV and cover letter** (candidate request, 2026-10-04). Label "Portafolio" on Spanish documents, "Portfolio" on English ones.
 - **Languages:** Spanish (native); English B1 Intermediate — see Language Evidence below
 - **Status:** Actively job seeking since August 2026 (MySourcing role ended July 2026), while running a
   direct freelance engagement for a private client (CostoPreciso — see Freelance Client Work)
+- **Driver's licence:** valid driver's licence, drives manual transmission (estándar) (candidate, 2026-10-20). Usable on postings that ask for "licencia vigente / manejo estándar" or field travel
 - **Professional licence:** Cédula Profesional 12320388 (SEP, Dirección General de Profesiones), issued 31 May 2021, verifiable at gob.mx/cedulaprofesional
-- **Constraints:** Open to remote (Mexico/LatAm and international), hybrid in Torreón, and relocation to another Mexican city. Not open to fully on-site 5 days/week.
+- **Constraints:** Open to remote (Mexico/LatAm and international), hybrid in Torreón, and relocation to another Mexican city. Not open to fully on-site 5 days/week, **except in the Monterrey metro area, specifically Apodaca, N.L.**: he is willing to relocate there and work fully on-site (candidate, 2026-10-20). Saturday shifts and junior-level roles are still not attractive there.
 - **CV language:** Both — English for remote-international postings, Spanish for Mexico/LatAm postings
+- **Family:** has an autistic nephew (candidate, 2026-11-01) — the brother entrusts him with the nephew's care, which taught him patience, explaining calmly, respecting routines, and setting clear limits with warmth. Usable as a concrete personal example for behavioral/psychological interviews that probe comfort and boundaries around children/adolescents (e.g. school-sector roles) — not a professional credential, never phrase it as one.
 
 ### LinkedIn corrections pending (as of 2026-08-21)
 
@@ -68,15 +71,35 @@ sits *before* any chance to demonstrate the work.
 
 **Note:** the LinkedIn education entry reads `Ing. en Informática, Inglés · (2010 - 2015)` — the ", Inglés" is not part of the official degree name and should be removed from LinkedIn.
 
+### Thesis (verified against the Google Doc, 2026-11-01)
+
+**"Análisis y Diseño de Módulos de Gestión para un Ecosistema de Aprendizaje en Nivel Preescolar"** — Instituto Tecnológico Superior de Lerdo, October 2017, advisor M.A. Elda Moreno Núñez. Presented individually for the degree ("PRESENTA: José Gerardo Martínez Morán").
+
+- Part of a larger CONACyT-funded research project ("Ecosistema de aprendizaje para mejorar el pensamiento matemático en preescolar con realidad aumentada", CONACyT 231156), run jointly by the Instituto and Fundación Interdisciplinaria para el Desarrollo Empresarial. The AR learning activities and hardware/tablets belonged to the Fundación; the thesis covers **only the administrative web layer**.
+- **Scope — state this precisely, never claim the AR engine itself:** PHP/Laravel (MVC) + MySQL backend, HTML/CSS/JavaScript/jQuery/Bootstrap frontend, social login (Facebook/Twitter/Google OAuth), prototyped in NinjaMock. Three actor-facing modules: educadores, padres de familia, alumnos.
+- The "calificaciones" module is a **reporting/query view**, not an AR evaluation engine: it displays attempts, status and final grade per already-completed AR activity (recorded elsewhere, on the mobile device), plus exportable PDF/Excel reports and a kardex for educators. **Never describe this as having built the AR grading/evaluation logic itself** — that lived in the Fundación's existing AR material, outside the thesis's documented scope.
+- The wider CONACyT project had a team structure with one "Jefe Programador" over three module owners (educadores, padres, alumnos); the document does not name who held which role, so **do not claim being the sole lead programmer** — state only the individually-presented module scope above unless this gets clarified.
+- No pilot school, user count, or field-deployment evidence in the document — it is an analysis-and-design deliverable, not a production rollout. Conclusions state project objectives and quality requirements were met, with no numbers.
+- **Usable in interviews** as the origin story for "ya desarrollé sistemas escolares" claims (e.g. the Pereyra school application) — but phrase it as the real scope above, not as a shipped AR grading system.
+
 ## Professional Experience
 
 ### Full-Stack Web & AI Developer Senior - MySourcing (May 2022 - Jul 2026)
 Acapulco de Juárez, Guerrero, Mexico (remote)
 
-**Internal Chat Platform (2025-2026)**
+**Internal Chat Platform (2025-2026)** — **built solo (candidate, 2026-09-29)**: he was the only developer of this platform, unlike the Requisitions Portal, which had a second developer.
 - Architected a centralized web chat system as a unified API hub connecting multiple internal and external products in a multitenant environment (isolated per company)
 - Implemented real-time bidirectional communication with Socket.io: live notifications, cross-product messaging, collaborative actions
 - Built end-to-end encrypted file sharing across tenant boundaries
+- **End-to-end encryption between chats (messages), not only files** (candidate, 2026-10-20). The chat had
+  point-to-point encryption between conversations. The ordering rule below still applies: architecture
+  decided unaided, security audited with Claude once in production
+- **Planned, not delivered (candidate, 2026-10-20):** the chat was meant to be adapted to multiple sites
+  through an **MCP server** that would also feed MySourcing's wider software ecosystem. He wrote "se iba a",
+  so treat it as a design intent: never claim the MCP server shipped or ran in production unless he
+  confirms it was built
+- **Built with Spec-kit** (candidate, 2026-10-20): the chat platform was one of the latest MySourcing
+  projects developed with Spec-kit. Real, but under NDA with no artifacts to show
 - Implemented **rate limiting / request throttling** on the chat platform's APIs
 - Integrated purchase-authorization workflows from the Requisitions Portal directly into the chat UI, removing context-switching for approvers
 - **Developed an AI orchestration layer exposing the company's product suite as tools callable by the LLM**, enabling automation of cross-system workflows
@@ -97,6 +120,7 @@ doubles as the answer to "how much of your work does the AI do?".
 - Stack: TypeScript, ReactJS, Node.js, Express, Socket.io, Prisma ORM, PostgreSQL, Tailwind, Axios, Docker, Claude AI, Claude Code, Spec-kit
 
 **Requisitions Portal (2025-2026)**
+- **Scope correction (candidate, 2026-09-29): two developers, not one.** He wrote the **API** and **part of the interface**; the **architecture was his**; the **data model was his colleague's**; the two of them **handled deployment together**. In production with **3-4 users**. **Reconfirmed 2026-10-20 (candidate):** the other developer contributed part of the frontend and the database. Never write "built end to end" or "sole developer" for this portal; write "co-built" or "built the API and part of the interface"
 - Designed and built the full purchase-requisition lifecycle: creation, multi-level authorization, supplier management, payment tracking
 - Automated supplier communication through transactional email workflows including purchase-order generation and delivery status updates
 - Built real-time dashboards giving finance and operations teams visibility into spending and pending approvals
@@ -121,6 +145,12 @@ doubles as the answer to "how much of your work does the AI do?".
 - Analysis and development of HR modules for multi-company payroll and personnel management
 - Bug fixes and iterative improvements to the payroll calculation engine
 - Stack: JavaScript, Node.js, MySQL, AngularJS, RxJS, PHP, Laravel, Docker
+- **Payroll system upgrade (candidate, 2026-11-03):** during an update of this payroll system he worked
+  with **Laravel 11**, in a **monolith combined with Angular 21** (modern Angular, confirmed by the
+  candidate 2026-11-03). He **wrote unit tests with PHPUnit** for it (confirmed 2026-11-03). Laravel 11
+  (Mar 2024) and Angular 21 (Nov 2025) date the upgrade to roughly 2024-2026, i.e. after the original
+  2022-2024 module work. Scope, coverage and his share of the upgrade not recorded; claim participation
+  in the upgrade, not that he led it, and no coverage percentage
 
 **Role-level responsibilities (imported from the candidate's Notion prep notes, confirmed 2026-09-02)**
 - Worked under **Scrum**
@@ -152,11 +182,14 @@ profile — the LinkedIn entry reads "sistema de nóminas y de proyecciones fina
 it makes payroll a **two-employer** thread (BOZ IT 2022, then MySourcing 2022-2024) rather than a single
 one, which strengthens any application to an HR/payroll or fintech-adjacent product.
 
-### Webmaster Developer - Basculas REVUELTA (Jul 2021 - Jan 2022)
+### Webmaster Developer - Grupo Revuelta (Jul 2021 - Jan 2022)
+<!-- Company name is "Grupo Revuelta", not "Basculas REVUELTA" (candidate, 2026-10-16) -->
+
 Torreón, Coahuila, Mexico
 - Administered and improved Grupo Revuelta's websites using ASP.NET MVC, Umbraco, and AngularJS
 - Installed and administered the Magento e-commerce platform for the livestock store; developed custom plugins with PHP and Magento
-- Stack: ASP.NET MVC, Umbraco, AngularJS, PHP, Magento, HTML, CSS, JavaScript, C#
+- **Added 2026-10-16 (candidate):** built new **.NET 6 APIs (ASP.NET Core) with Entity Framework Core** that connected to Umbraco and to Magento. Started the new project on .NET 5 / EF Core 5 and migrated it to **.NET 6 / EF Core 6** when it released (Nov 2021). Depth beyond this (auth, testing, deployment, API volume) not recorded; ask before claiming more. Modern .NET therefore dates from late 2021, not only 2017-2020 MVC
+- Stack: ASP.NET MVC, ASP.NET Core (.NET 5/6), Entity Framework Core 5/6, Umbraco, AngularJS, PHP, Magento, HTML, CSS, JavaScript, C#
 
 ### Freelance Full-Stack Developer - ATT / ProntoForms project (Nov 2020 - Jun 2021)
 Remote, Mexico
@@ -187,7 +220,23 @@ is applied consistently, and until now it lived only in the PJV prep notes. If c
 
 Never introduce a third set of numbers. If a precise figure is needed and cannot be recalled, say it is an
 estimate rather than inventing precision.
-- Stack: PHP 8, Laravel 8, Vue.js, MySQL, Redis, Docker, AWS S3
+- **Outcome of the stored-procedure refactor (candidate, 2026-09-29):** the number of calls dropped a lot
+  (unmeasured, no figures). **Platform end of life:** it stopped being used because of the client's cost
+  savings; the client asked for changes he had no schedule to build at that point. Say "retired for cost
+  reasons"; never claim a measured percentage
+- **Hosting (candidate, 2026-09-29): the platform ran on AWS EC2** (plus S3). This is his **only AWS
+  production experience on that platform. **Corrected 2026-10-01 (candidate): he has also worked with
+  AWS Route 53 and IAM** on this same ProntoForms/ATT platform (candidate, 2026-10-01; "AIM" assumed to
+  be IAM), and **AWS Lightsail at Grupo Revuelta** (what it hosted not recorded). Claim the services
+  only: EC2, S3, Route 53, IAM (ProntoForms); Lightsail (Revuelta). Still **not used**: Lambda, Serverless Framework, SQS, SNS, DynamoDB,
+  CDK. The stored-procedure performance
+  investigation above was **diagnosed through application logs**; **no before/after numbers exist**, so
+  never state a measured improvement
+- **Redis for query caching and MySQL indexes (candidate, 2026-11-03):** on this platform he used **Redis as a
+  cache for database query results** and **created MySQL indexes** to speed up queries. No hit rates or
+  before/after timings recorded; claim the techniques, never a measured gain. This is caching and
+  database indexing, **not a search engine**: he has never used Elasticsearch, OpenSearch or RediSearch
+- Stack: PHP 8, Laravel 8, Vue.js, MySQL, Redis, Docker, AWS S3, AWS EC2
 
 ### Analista de Desarrollo (Analyst Developer) - Grupo Batta Hermanos (Sep 2019 - Oct 2020)
 Torreón, Coahuila, Mexico
@@ -206,6 +255,7 @@ Torreón, Coahuila, Mexico
   corrected letter before any employment verification runs against it.
 - Analysed, developed, and deployed two mobile applications (Ionic + AngularJS), a website (Node.js + VueJS), and a web service (ASP.NET MVC Core + C#) to onboard voucher distributors and supervise field staff; measurably increased distributor quota and reduced processing times
 - **How the mobile work actually started (candidate-confirmed 2026-09-02):** the first app — for client-service staff uploading credit-authorisation prospects — was **inherited from an external vendor**, and he learned Ionic and AngularJS from scratch to adapt it and wire it to the .NET Core Web API, with no internal mobile team and nobody in-house to ask. He built the second app himself. Prep notes that describe coordinating with a "mobile team" here are wrong; see the quarantine list in `10-star-bank.md`
+- Used **LINQ and Entity Framework** to build the ASP.NET MVC APIs at Batta (confirmed by the candidate 2026-10-14)
 - Maintained a store-support website for in-branch incident reporting (HTML, CSS, JavaScript, jQuery, PHP)
 - Maintained sensitive credit-area data directly in SQL Server (T-SQL) where ERP actions were unavailable
 - Maintained plugins for Batta Hermanos' VisCoi ERP system, written in Visual Basic 6.0
@@ -232,7 +282,11 @@ Torreón, Coahuila, Mexico
 - Legal entity for forms and background checks: **Asesoría en Sistemas y Tecnologías Administrativas
   S.A. de C.V.** (RFC AST020720GD2).
 - Developed, deployed, and maintained point-of-sale systems with electronic invoicing and third-party airtime top-up integrations, using C# and Windows Forms (.NET Framework 4.0) with direct Microsoft SQL Server LocalDB connections; **now one of the company's top revenue lines**
-- Built the corresponding .exe packaging with all required programs and database installations for correct deployment
+  - Detail confirmed by the candidate 2026-10-14: fully functional desktop POS handling sales transactions
+    and available inventory; consumed **SOAP web services** for cell-phone airtime top-ups (recargas) and
+    bill/service payments (pago de servicios). **The SOAP client was built with WCF** (confirmed 2026-10-14).
+    Claim "WCF para consumir servicios SOAP"; authoring/hosting WCF services is not confirmed
+- Built the corresponding .exe installer packaging bundling all required programs plus a **SQL Server Express** install, for deployment on multiple client machines (candidate wording 2026-10-14; earlier note said LocalDB)
 - Built dynamic websites with PHP and Laravel for multiple clients
 - Built e-commerce sites on the Aimeos framework (PHP/Laravel), integrating PayPal, Conekta and **OpenPay** payment gateways (OpenPay confirmed by the candidate 2026-08-17 as Asta-era work, ~2019, on the Aimeos e-commerce — not a later role)
 - Stack: C#, .NET Framework, PHP, Laravel, Aimeos, MySQL, SQL Server, Firebird, HTML, CSS, JavaScript, jQuery, PayPal, Conekta, OpenPay
@@ -344,8 +398,9 @@ limitations.
   **Engagement, corrected by the candidate on 2026-09-02:** this is a **direct freelance engagement for a
   client**, not a personal product and not MySourcing client work. Earlier drafts of this file, of
   `CLAUDE.md`, of the portfolio prompt and of the site filed it under independent/personal projects; that
-  was wrong. On a CV it belongs in **professional experience** as a freelance entry (2026 - present, "private
-  client", remote), where it also covers the period since MySourcing ended in July 2026.
+  was wrong. **Superseded 2026-10-16 (candidate, applies to every future CV): it does NOT go on a CV as an
+  experience entry.** The last job on every CV is MySourcing (May 2022 - Jul 2026); no "present" entry, no
+  private-client entry. It may back a skill (Spec-kit, spec-first method) in competencies only.
   **Do not name the client** — the candidate has not authorized it. Write "a private client".
 
   **Verified on 2026-08-21 by inspecting the working tree, not from the candidate's account:**
@@ -394,9 +449,12 @@ Grouped by strength of evidence, not by aspiration. Use these levels when writin
 ### Strong - long production use (5+ years)
 - **PHP / Laravel** — Asta, ProntoForms, Revuelta, MySourcing
 - **C# / ASP.NET MVC** — Asta, Batta Hermanos, Revuelta
+- **ASP.NET Core 6 / EF Core 6** — Revuelta only (late 2021, APIs for Umbraco and Magento); real but single project, not 5+ years
 - **JavaScript / jQuery** — every role since 2017
 - **MySQL / MariaDB** and **SQL Server (T-SQL)** — every role since 2017
-- **VueJS (2/3)** and **AngularJS** — Batta, ProntoForms, MySourcing
+- **VueJS (2/3)** and **AngularJS (1.x)** — Batta, ProntoForms, Revuelta, MySourcing
+- **Angular (2+, version 20)** — MySourcing, sustained production use for a year or more (candidate, 2026-10-06; version 20 confirmed 2026-10-14).
+  A different framework from AngularJS; never merge the two into one "Angular" claim
 - **HTML / CSS / Bootstrap**
 
 ### Strong - recent production use (2022-2026)
@@ -404,26 +462,86 @@ Grouped by strength of evidence, not by aspiration. Use these levels when writin
 - **ReactJS**, **Node.js / Express**, **Prisma ORM**, **PostgreSQL**, **Socket.io**, **Tailwind**, **Docker**
 
 ### Developing - real but narrower exposure
-- **LangChain / LangGraph** (Udemy course completed May 2026 + AI orchestration layer at MySourcing)
+- **LangChain / LangGraph** (Udemy course completed May 2026 only; the MySourcing AI layer used the Anthropic API directly, not LangChain — see the 2026-09-29 note below)
 - **Python**, **Claude API**, **Next.js**, **Redis**, **AWS S3**, **RxJS**
 - **n8n** — one complete conversational-agent workflow built and documented end to end (CuatroD Studios
   assessment, June 2026): Data Tables, Code nodes, HTTP Request against an OpenAI-compatible endpoint,
   Telegram trigger and send, Wait-based debounce. Single project, not years of use — say so.
 
+### Confirmed by the candidate, 2026-09-29: the MySourcing AI layer used the Anthropic API only
+- **The MySourcing AI orchestration layer used the Anthropic API directly. LangChain and LangGraph were
+  NOT used in it** (candidate, 2026-09-29). They come only from the Udemy course (May 2026). Never write
+  that LangChain or LangGraph ran in production, at MySourcing or anywhere else.
+- He answered an application form question ("have you worked as an AI engineer?") on 2026-09-29 with: yes,
+  the MySourcing agent layer plus the n8n assessment, and Claude Code with spec-driven development.
+
+### Confirmed by the candidate, 2026-10-06: Angular 2+ (not just AngularJS)
+- **Angular 2+ (modern Angular), sustained production use for a year or more, at MySourcing.** Until this
+  date the whole profile recorded only **AngularJS 1.x**, which is a different framework, so earlier CVs
+  and letters understate him on Angular. Both are now true and must be kept distinct in writing: AngularJS
+  1.x at Batta, ProntoForms and Revuelta; **Angular 2+ at MySourcing**.
+- **Major version: Angular 20** (candidate, 2026-10-14 — he wrote "angularJS en la versión 20"; AngularJS
+  stops at 1.8, so this is modern Angular 20). CVs may say "Angular 20" and it satisfies "Angular 16+".
+- **Angular 21 also confirmed (candidate, 2026-11-03):** the payroll-system upgrade at MySourcing ran a
+  Laravel 11 + Angular 21 monolith. CVs may now say "Angular 20/21" or "Angular (up to v21)".
+- **Still unrecorded:** which module or product it was, and whether it
+  included RxJS-heavy state, standalone components or Angular CLI tooling. Ask before writing any detail
+  beyond "Angular, more than a year in production at MySourcing". Do not claim Angular Material, NgRx,
+  SSR/Universal or Ionic-with-Angular-2+ until he says so.
+
+### Confirmed by the candidate, 2026-09-29 (scale and employer not recorded)
+- **CI/CD pipelines with GitHub Actions and with GitLab CI** — has built and run them. Where and at what
+  scale was not stated; claim the tools, not a depth, and ask before naming a project or employer.
+- **Google Workspace API** — has used it. Context not recorded; claim "Google Workspace API integration"
+  and nothing more specific until he says which services.
+- **Not used:** Playwright, Cypress (no browser end-to-end test frameworks).
+
 ### Methodology
 - **Agentic engineering as a core development practice**: Claude Code used daily, Spec-driven Development
   (Spec-kit), multi-agent orchestration
-- **Where the Spec-driven Development claim is actually backed:** the CostoPreciso / CosteoMX project under
-  Independent Projects — a written constitution plus 16 features carried through spec/plan/tasks, 14,706
-  lines of specification, 346 passing engine tests. Cite that project, not MySourcing, when a posting asks
-  for evidence: the MySourcing work is real but sits behind an NDA with no artifacts to show.
+- **Where the Spec-driven Development claim is backed:** Spec-kit was used **at MySourcing on the latest
+  projects, including the chat platform** (candidate, 2026-10-20), so "used Spec-kit at work" is true. That
+  work is under NDA with no artifacts to show. The **showable** evidence is the CostoPreciso / CosteoMX
+  engagement under Freelance Client Work: a written constitution plus 16 features carried through
+  spec/plan/tasks, 14,706 lines of specification. When a posting asks for evidence, cite the method as
+  used at MySourcing and keep CostoPreciso for interview detail (never as a CV role, per the 2026-10-16
+  rule).
 - **Judgment about when not to apply it** is separately evidenced in the LexCore assessment, where spec-kit
   was declined with a written reason.
 - Professional Git workflow: branching, pull requests, code review
 - Linux/Ubuntu environments, containerized services
 
+### Design patterns
+Self-reported in the candidate's older CV "about me" and backed by the Platzi course *Patrones de Diseño y
+Buenas Prácticas en PHP* (Sep 2024): **MVC, Singleton, Factory, Strategy, Decorator, Observer**. Safe to list
+as applied knowledge on backend/PHP/OOP postings. Do not inflate into "architected a pattern library" or
+claim formal software-architecture credentials.
+
 ### Legacy / maintenance-capable
 - Visual Basic 6.0, Firebird, Magento, Umbraco, WordPress, Ionic, DevExpress
+
+### Hands-on IT support — PAID PER SERVICE since 2019 (corrected 2026-10-12)
+**Correction:** on 2026-10-09 this section recorded all of it as hobby, never paid. On 2026-10-12 the
+candidate stated otherwise: since **2019** he has given **on-demand technical support, paid per service**, to
+the law firm of **Dr. Ricardo Ramírez Murillo** (abogado, Fco. I. Madero 178 Sur, Col. Centro, Torreón), in
+parallel with his development jobs. Duties, in his words:
+- Equipment diagnosis, software side: formatting, software installation, general Windows troubleshooting
+- Hardware: component upgrades and replacement, preventive maintenance
+- Installing, configuring and supporting the office network and internet that interconnect PCs, printers,
+  cameras and other devices
+- Client service (atención al cliente)
+
+**Evidence:** candidate statement only. The letter in `documents/references/gera-recomendacion-drRamirez.pdf`
+is a **character recommendation** (honourable, hard-working, known for three years) and does **not** describe
+the IT work or any employment; its year is covered by the stamp (2019 most likely, given "27 años"). Dr.
+Ramírez may be listed as a referee with the office phone (871) 204-04-50 (candidate approval, 2026-10-12).
+
+**How to use it:** legitimate on support / helpdesk / ayudante general / atención a clientes CVs, labelled
+as independent per-service support ("Soporte técnico independiente"), part-time alongside development. Its
+scope is **small-office support**: there is still no Windows Server, Active Directory, firewall/VPN
+administration, VoIP or structured-cabling evidence, so it does not back an enterprise sysadmin or
+"Networking & Server Infrastructure" claim. Month of start not recorded; write "2019 - presente".
+Smartphone repair and electronics/hardware modding remain **hobby level**.
 
 ### Domain Expertise
 - **Multitenant SaaS architecture** — per-company isolation, shared API hub

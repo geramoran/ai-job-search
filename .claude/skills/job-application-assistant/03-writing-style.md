@@ -167,6 +167,12 @@ in the take-home"* / *"I would rather you knew now than found out in the first s
 converts the profile's real weaknesses into evidence of judgment, and it is the reason these letters do not
 read as inflated.
 
+**Candidate overrides, 2026-10-04 (these supersede the pattern above and apply to every future cover letter):**
+- **Drop the closing "favour to the reader" line** of the gap paragraph ("Better you hear both from me now...", "Prefiero que lo sepan ahora y no en el primer sprint"). Name the gap, draw its boundary, stop.
+- **Never put the automated-test count (346) in a cover letter or a CV** (extended to CVs the same day). The candidate does not want that number anywhere in application documents. Describe the project instead (e.g. "un SaaS para monitoreo de costeo para un cliente privado").
+- **Never present the CostoPreciso / CosteoMX SaaS as work in a cover letter** (candidate rule, 2026-10-16, same as CVs): no "sole developer of a SaaS for a private client", no "present" role. The last job is MySourcing. The spec-first method may be named as a method, with no client or project attached. This supersedes the API-hub wording below where it mentions the SaaS.
+- For the API-hub bullet, the candidate's own wording is: "Con Node.js, TypeScript y React he diseñado hubs de API con Express, Socket.io, Prisma y PostgreSQL con sistema multitenant y rate limiting. También he creado, para un cliente privado, un SaaS para monitoreo de costeo."
+
 **4. One verified, dated company fact.** Teradata's letter cites the Autonomous Knowledge Platform reaching
 general availability in July. Per rule 5 above, verify independently before writing it — and note that
 Prospera's letter deliberately does **not** claim knowledge of "Sophie" beyond citing their own ad, because

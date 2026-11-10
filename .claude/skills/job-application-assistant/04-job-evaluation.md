@@ -134,7 +134,7 @@ Does this role advance career goals and contain tasks that energize?
 
 **Life situation alignment:**
 - **Security:** between roles since August 2026 (MySourcing ended July 2026). Actively searching. Willing to consider a broad range rather than holding out for a single profile.
-- **Flexibility:** based in Torreón, Coahuila (GMT-6). Open to remote (Mexico/LatAm and international), hybrid locally, and relocation to another Mexican city. Four years of proven remote delivery.
+- **Flexibility:** based in Torreón, Coahuila (GMT-6). Open to remote (Mexico/LatAm and international), hybrid locally, and relocation to another Mexican city; fully on-site accepted only in the Monterrey metro / Apodaca, N.L. (2026-10-20). Four years of proven remote delivery.
 - **Professional development:** priority is deepening AI/agentic engineering in a role that uses it in production, not in a role that merely permits experimentation.
 
 ## Calibration from Past Applications
@@ -227,7 +227,7 @@ These are the candidate's stated deal-breakers. A posting matching any of them i
 
 | Filter | Reject when |
 |--------|-------------|
-| Fully on-site | Requires 5 days/week on premises with no hybrid option |
+| Fully on-site | Requires 5 days/week on premises with no hybrid option. **Exception (candidate, 2026-10-20): Monterrey metro, specifically Apodaca, N.L.** On-site there is acceptable with relocation; score location as FLAG (relocation), not FAIL |
 | On-call | Night on-call rotation or 24/7 support duty |
 | Legacy-only | Role is maintenance/support of existing systems with no new development |
 | Body-shop staffing | Consultancy that rents developers by the hour to a final client (cárnica / staffing por proyecto) |
