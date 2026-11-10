@@ -40,13 +40,14 @@ Read the current state of these files and report whether each has content or is 
 
 - `.claude/skills/job-application-assistant/01-candidate-profile.md`
 - `.claude/skills/job-application-assistant/02-behavioral-profile.md`
+- `.claude/skills/job-application-assistant/03-writing-style.md` *(any "Patterns Observed in Past Applications" section only — the writing rules are preserved)*
 - `.claude/skills/job-application-assistant/04-job-evaluation.md` *(personalized match areas, career goals, and life-situation constraints only — the scoring framework is preserved)*
 - `.claude/skills/job-application-assistant/05-cv-templates.md` *(profile statements section and the contact block inside the LaTeX template only — framework structure is preserved)*
 - `.claude/skills/job-application-assistant/06-cover-letter-templates.md` *(contact line and signature inside the LaTeX template only — framework structure is preserved)*
 - `.claude/skills/job-application-assistant/07-interview-prep.md` *(STAR examples and STAR candidates sections only — framework structure is preserved)*
 - `.claude/skills/job-scraper/search-queries.md` *(role titles, domain keywords, and location terms only — query structure is preserved)*
 
-This list must stay in step with what `/setup` Step 3 populates: every skill file it writes candidate data into is cleared here.
+This list must stay in step with what `/setup` writes in Step 3 and infers in Path A's Step A5: every skill file that receives candidate data from either path is cleared here. Known gap: the opening patterns Path A adds to `06-cover-letter-templates.md` are not labelled, so they cannot yet be told apart from the shipped templates and are kept.
 
 Present as:
 
@@ -58,6 +59,10 @@ Present as:
 
 - 02-behavioral-profile.md — [has content / already empty]
   Full file will be replaced with a blank template.
+
+- 03-writing-style.md — [has observations from past applications / nothing to clear]
+  Any "Patterns Observed in Past Applications" section that /setup drew from your
+  own cover letters will be removed. The writing rules are preserved.
 
 - 04-job-evaluation.md — [has personalized criteria / already blank]
   Your match areas, career goals, energizing/draining tasks, and life-situation
@@ -78,7 +83,8 @@ Present as:
   restored to placeholders. The query structure and filter sections are preserved.
 
 The following files are NOT touched (they contain framework rules, not candidate data):
-  - 03-writing-style.md
+  - 08-application-forms.md
+  - 09-web-research.md
 
 Outside the profile scope, still holding your personal data: CLAUDE.md and
 cv/main_example.tex. This scope covers skill files only.
@@ -86,7 +92,11 @@ cv/main_example.tex. This scope covers skill files only.
 
 ### If scope includes `documents`:
 
-Use Glob to list all files present in `documents/cv/`, `documents/linkedin/`, `documents/diplomas/`, `documents/references/`, `documents/projects/`, `documents/postings/`, and `documents/applications/`. Present as:
+Use Glob to list all files present in `documents/cv/`, `documents/linkedin/`, `documents/diplomas/`, `documents/references/`, `documents/projects/`, `documents/postings/`, and `documents/applications/`.
+
+Include nested and hidden user entries in the inventory. Each subfolder's tracked `.gitkeep` is a scaffold placeholder: exclude it from the deletion list and from the empty/non-empty decision, and preserve it.
+
+Present as:
 
 ```
 ## Documents reset will delete:
@@ -149,6 +159,11 @@ Every skill file under `.claude/skills/job-application-assistant/` opens with a 
 
 ## Identity
 
+### Languages
+
+| Language | Level | Notes |
+|----------|-------|-------|
+
 ## Education
 
 ## Professional Experience
@@ -187,6 +202,8 @@ Every skill file under `.claude/skills/job-application-assistant/` opens with a 
 
 ## Using This in Applications
 ```
+
+**For `03-writing-style.md`**, remove any `## Patterns Observed in Past Applications` section, which `/setup` Path A writes from the user's own cover letters. The shipped file has no such section, so leave every other section of `03-writing-style.md` intact: its rules are framework, not candidate data.
 
 **For `04-job-evaluation.md`**, restore the values `/setup` Step 3.4 personalized back to their placeholder tokens, leaving every surrounding line untouched:
 
@@ -246,16 +263,22 @@ Leave the rest of the file intact: the portal-CLI and WebSearch-fallback explana
 
 ### Documents reset
 
-For each non-empty document subfolder, delete all files within it using Bash `rm`. Do not delete the folder itself, and do not delete `documents/README.md`.
+For each non-empty document subfolder, delete all user entries, including nested folders and hidden files. Preserve the seven top-level subfolders, their `.gitkeep` placeholders, and `documents/README.md`. Run the following block only after the confirmation above. It is POSIX shell on purpose: the Bash tool runs whatever shell the user has, which is zsh on macOS, and a bash-only builtin such as `shopt` fails there with `command not found` before anything is deleted. `find` lists hidden entries and nested folders without any glob setting. If `documents/` or any of its seven roots is a symbolic link, stop before deleting anything and ask the user to replace that linked root with a local document folder.
 
 ```bash
-rm -f documents/cv/*
-rm -f documents/linkedin/*
-rm -f documents/diplomas/*
-rm -f documents/references/*
-rm -f documents/projects/*
-rm -f documents/postings/*
-rm -rf documents/applications/*/
+(
+  set -e
+  for directory in documents documents/cv documents/linkedin documents/diplomas documents/references documents/projects documents/postings documents/applications; do
+    if [ -L "$directory" ]; then
+      printf 'Reset stopped: %s is a symbolic link.\n' "$directory" >&2
+      exit 1
+    fi
+  done
+  for directory in documents/cv documents/linkedin documents/diplomas documents/references documents/projects documents/postings documents/applications; do
+    [ -d "$directory" ] || continue
+    find "$directory" -mindepth 1 -maxdepth 1 ! -name .gitkeep -exec rm -rf -- {} +
+  done
+)
 ```
 
 ---
@@ -282,7 +305,7 @@ Then tell the user what to do next based on what was reset:
 > Note that `CLAUDE.md` and `cv/main_example.tex` are outside the `profile` scope and still hold your personal data. If you are handing this fork over or making it public, clear them by hand.
 
 **If documents were reset:**
-> The `documents/` folder is now empty. Add your career documents and run `/setup` to populate your profile. See `documents/README.md` for instructions on what to put where.
+> Your user documents are now cleared. The folder structure, `.gitkeep` placeholders, and `documents/README.md` are preserved. Add your career documents and run `/setup` to populate your profile.
 
 **If both were reset:**
-> Both your profile files and documents folder are now empty. Add documents to `documents/` (or skip and use the CV import / interview path), then run `/setup`.
+> Your profile data and user documents are now cleared; the document folders, `.gitkeep` placeholders, and `documents/README.md` are preserved. Add documents to `documents/` (or skip and use the CV import / interview path), then run `/setup`.

@@ -79,11 +79,23 @@ Secondary:
 
 Queries are grouped by priority. Write **each category in every language from your Languages table** (see Language scope above). Combine each query with your location terms (e.g. your city, region, or metro area) where the site supports it.
 
+Each priority has two kinds of block. **Plain terms** blocks are what the portal CLIs consume: one term per line, one CLI call per term, no `OR`, no `site:` prefix, and no location (the CLI's location flag, or the city in `--query` where that portal's SKILL.md says so, carries it). Quote a multi-word phrase only if the portal's `Query syntax:` line says quoting is honoured. **WebSearch-only** blocks are Google syntax (`site:`, quotes, `OR`) for the fallback path and are never passed to a CLI.
+
 **Organize by function, not job title.** The same underlying work carries different titles across companies and markets (a "Data Scientist" role at one employer may be posted as "Insights Analyst" or "Data Consultant" at another). Name each priority category after the function it covers, and list several plausible job titles as query variants within that category rather than betting an entire priority tier on one exact title string.
 
 ### Priority 1: AI / Agentic Engineering
 
 The candidate's differentiator and most-desired direction. Production LLM orchestration, not model training.
+
+#### Plain terms (portal CLIs)
+
+```
+[YOUR_PRIMARY_JOB_TITLE_1]
+[YOUR_PRIMARY_JOB_TITLE_2]
+[YOUR_KEY_SKILL]
+```
+
+#### WebSearch-only (`site:` fallback)
 
 ```
 site:linkedin.com/jobs "AI Engineer" remoto México
@@ -102,6 +114,15 @@ Filter these hard: reject postings whose core is model training, fine-tuning, ev
 
 Highest-volume, highest-conversion direction. The stable base.
 
+#### Plain terms (portal CLIs)
+
+```
+[YOUR_DOMAIN_KEYWORD_1]
+[YOUR_DOMAIN_KEYWORD_2]
+```
+
+#### WebSearch-only (`site:` fallback)
+
 ```
 site:linkedin.com/jobs "Senior Full Stack" TypeScript React remoto México
 site:linkedin.com/jobs "Full Stack Developer" Node.js PostgreSQL remote LATAM
@@ -116,6 +137,15 @@ site:linkedin.com/jobs "React" "Node.js" "Prisma" OR "PostgreSQL" remote
 
 Deepest accumulated experience. Less senior competition, less modern stack.
 
+#### Plain terms (portal CLIs)
+
+```
+[YOUR_ADJACENT_TITLE_1]
+[YOUR_ADJACENT_TITLE_2]
+```
+
+#### WebSearch-only (`site:` fallback)
+
 ```
 site:linkedin.com/jobs "Senior Backend" PHP Laravel remoto México
 site:occ.com.mx "Desarrollador PHP Laravel" senior remoto
@@ -128,6 +158,15 @@ site:linkedin.com/jobs "Laravel" "MySQL" senior developer LATAM
 ### Priority 4: Adjacent and Broader
 
 Wider net. Roles the profile supports that the candidate may not search for by name.
+
+#### Plain terms (portal CLIs)
+
+```
+[YOUR_KEY_SKILL] developer
+technical consultant
+```
+
+#### WebSearch-only (`site:` fallback)
 
 ```
 site:linkedin.com/jobs "Software Engineer" C# ".NET" remoto México

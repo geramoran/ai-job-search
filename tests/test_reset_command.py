@@ -31,10 +31,19 @@ import re
 import subprocess
 import unittest
 from pathlib import Path
+from tempfile import TemporaryDirectory
+
+try:
+    from tests._bash import find_bash
+    from tests._upstream import is_upstream_checkout
+except ImportError:  # `python -m unittest discover -s tests` imports test modules top-level
+    from _bash import find_bash
+    from _upstream import is_upstream_checkout
 
 REPO = Path(__file__).resolve().parent.parent
 RESET = REPO / ".claude" / "commands" / "reset.md"
 SETUP = REPO / ".claude" / "commands" / "setup.md"
+BASH = find_bash()
 
 
 def tracked_document_subfolders():
@@ -73,16 +82,26 @@ class TestResetCoversEveryDocumentsSubfolder(unittest.TestCase):
             f"so the user confirms a deletion list that omits them: {missing}",
         )
 
+    @unittest.skipUnless(BASH, "requires Bash to replay the documented /reset command")
     def test_delete_block_removes_every_subfolder(self):
-        deleted = set(re.findall(r"rm -r?f documents/(\w+)/", self.text))
-        missing = sorted(self.folders - deleted)
-        self.assertEqual(
-            missing,
-            [],
-            "reset.md's delete block has no rm line for these documents/ "
-            'subfolders, yet the command then claims "The `documents/` '
-            f'folder is now empty.": {missing}',
-        )
+        # Exercise the deletion contract, rather than requiring one particular
+        # spelling of rm. Keep deriving the folder set from git so a newly
+        # tracked document root still has to be handled by the real command.
+        section = self.text.split("### Documents reset", 1)[1]
+        script = re.search(r"```bash\n(.*?)```", section, re.S).group(1)
+        with TemporaryDirectory() as directory:
+            root = Path(directory)
+            for folder in self.folders:
+                path = root / "documents" / folder
+                path.mkdir(parents=True)
+                (path / ".gitkeep").write_text("Keep scaffold.\n")
+                (path / "user.txt").write_text("Remove document.\n")
+            result = subprocess.run([BASH, "-c", script], cwd=root, capture_output=True, text=True)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            for folder in self.folders:
+                path = root / "documents" / folder
+                self.assertEqual([entry.name for entry in path.iterdir()], [".gitkeep"])
+                self.assertEqual((path / ".gitkeep").read_text(), "Keep scaffold.\n")
 
 
 def section(text: str, start: str, end: str) -> str:
@@ -110,6 +129,78 @@ def setup_step3_skill_files():
         if matches:
             files.add(Path(target).name)
     return files
+
+
+def setup_path_a_inference_rules():
+    """(skill file, section headings) pairs /setup Path A's Step A5 writes into.
+
+    Step A5's inference rules are bullets of the form
+    '- **`<file>`** ...: ... under "## <Heading>" ...'. Path A writes from the
+    user's own documents and past applications, outside Step 3's headings, so
+    deriving coverage from Step 3 alone missed these targets.
+    """
+    a5 = section(SETUP.read_text(encoding="utf-8"), "### Step A5:", "### Step A6:")
+    rules = []
+    for line in a5.splitlines():
+        match = re.match(r"^- \*\*`([^`]+\.md)`", line)
+        if match:
+            rules.append((match.group(1), re.findall(r'"(## [^"]+)"', line)))
+    return rules
+
+
+class TestResetCoversPathAInferredContent(unittest.TestCase):
+    """/reset profile must clear what /setup Path A infers from past applications.
+
+    The regression: Path A adds '## Patterns Observed in Past Applications' to
+    03-writing-style.md from the user's own cover letters, while reset.md listed
+    03 as 'NOT touched (they contain framework rules, not candidate data)' - so
+    the user's past phrasing survived a reset that said the file held none.
+    """
+
+    def setUp(self):
+        self.text = RESET.read_text(encoding="utf-8")
+        self.rules = setup_path_a_inference_rules()
+        self.files = {name for name, _ in self.rules}
+        # Guard against a vacuous pass if Step A5's bullet format changes.
+        self.assertGreaterEqual(len(self.files), 6, self.rules)
+        self.assertIn("03-writing-style.md", self.files)
+
+    def test_step1_reads_every_path_a_file(self):
+        """The preview's has-content/nothing-to-clear verdicts come from Step 1's read list."""
+        inventory = section(self.text, "Read the current state of these files", "Present as:")
+        missing = sorted(f for f in self.files if f not in inventory)
+        self.assertEqual(missing, [], f"Step 1 never reads these Path A targets, so their preview line is unchecked: {missing}")
+
+    def test_preview_lists_every_path_a_file(self):
+        preview = section(
+            self.text, "### If scope includes `profile`:", "### If scope includes `documents`:"
+        )
+        listed = section(preview, "## Profile reset will clear:", "The following files are NOT touched")
+        missing = sorted(f for f in self.files if f not in listed)
+        self.assertEqual(missing, [], f"Path A writes into these, but the preview never offers to clear them: {missing}")
+
+    def test_preserved_list_claims_no_path_a_file_is_framework_only(self):
+        preserved = section(self.text, "The following files are NOT touched", "```")
+        mislabeled = sorted(f for f in self.files if f in preserved)
+        self.assertEqual(mislabeled, [], f"listed as framework-only, but Path A writes candidate data into: {mislabeled}")
+
+    def test_execution_removes_every_section_path_a_adds(self):
+        """Each heading must be named in the Step 3 instruction for its own file.
+
+        An instruction runs from its '**For `<file>`**' line to the next one, so
+        a heading attached to another file's instruction does not count.
+        """
+        execution = section(self.text, "### Profile reset", "### Documents reset")
+        blocks = {}
+        for match in re.finditer(r"^\*\*For `(?:[^`]*/)?([^`/]+)`\*\*(.*?)(?=^\*\*For `|\Z)", execution, re.S | re.M):
+            blocks[match.group(1)] = blocks.get(match.group(1), "") + match.group(2)
+        missing = sorted(
+            f"{name}: {heading}"
+            for name, headings in self.rules
+            for heading in headings
+            if heading not in blocks.get(name, "")
+        )
+        self.assertEqual(missing, [], f"Path A adds these sections, but no Step 3 instruction for that file removes them: {missing}")
 
 
 class TestResetCoversEveryPersonalizedSkillFile(unittest.TestCase):
@@ -192,6 +283,12 @@ def h2_headings(text):
     return [line.strip() for line in text.splitlines() if line.startswith("## ")]
 
 
+def appear_in_order(needles, haystack):
+    """Whether every needle occurs in haystack, in the same relative order."""
+    remaining = iter(haystack)
+    return all(needle in remaining for needle in needles)
+
+
 class TestResetTargetsTheHeadingsTheShippedFilesHave(unittest.TestCase):
     """Step 3's skeletons and anchors must name sections that exist.
 
@@ -217,12 +314,30 @@ class TestResetTargetsTheHeadingsTheShippedFilesHave(unittest.TestCase):
         for filename in ("01-candidate-profile.md", "02-behavioral-profile.md"):
             with self.subTest(file=filename):
                 shipped = (SKILL_DIR / filename).read_text(encoding="utf-8")
+                skeleton = h2_headings(skeleton_block(self.reset, filename))
+                if not is_upstream_checkout():
+                    # On a fork this file is the user's personalized profile, which
+                    # may carry ## sections of its own; a rename or a drop still fails.
+                    self.assertTrue(
+                        appear_in_order(skeleton, h2_headings(shipped)),
+                        f"/reset's skeleton headings for {filename} must all appear, in "
+                        f"order, in the personalized file: {skeleton}",
+                    )
+                    continue
                 self.assertEqual(
-                    h2_headings(skeleton_block(self.reset, filename)),
+                    skeleton,
                     h2_headings(shipped),
                     f"/reset's skeleton for {filename} must carry exactly the shipped "
                     "## headings, in order - a reset must not rename or drop sections",
                 )
+
+    def test_fork_heading_check_rejects_a_renamed_dropped_or_reordered_heading(self):
+        # The fork branch above never runs in upstream CI, so pin its strictness here.
+        skeleton = ["## Identity", "## Education", "## Awards"]
+        self.assertTrue(appear_in_order(skeleton, ["## Identity", "## Education", "## Certifications", "## Awards"]))
+        self.assertFalse(appear_in_order(skeleton, ["## Identity", "## Schooling", "## Awards"]))
+        self.assertFalse(appear_in_order(skeleton, ["## Identity", "## Awards"]))
+        self.assertFalse(appear_in_order(skeleton, ["## Education", "## Identity", "## Awards"]))
 
     def test_full_file_skeletons_keep_the_framework_version_frontmatter(self):
         # The shipped files open with a `framework_version` marker that
@@ -251,6 +366,28 @@ class TestResetTargetsTheHeadingsTheShippedFilesHave(unittest.TestCase):
                     get_framework_version_from_text(shipped),
                     f"a reset must leave {filename}'s framework_version readable and unchanged",
                 )
+
+    def test_candidate_skeleton_keeps_the_languages_table_under_identity(self):
+        # 04-job-evaluation.md's Language Gate and job-scraper/search-queries.md
+        # both read "your Languages table" from 01-candidate-profile.md. The
+        # skeleton had `## Identity` with nothing under it, so after a reset the
+        # gate and the scraper looked for a table the file no longer had. Both
+        # the `### Languages` heading and the table header row are derived from
+        # the shipped file; the placeholder data row is deliberately not kept.
+        shipped = (SKILL_DIR / "01-candidate-profile.md").read_text(encoding="utf-8")
+        start = shipped.index("### Languages")
+        header_rows = [
+            line for line in shipped[start:].splitlines()[1:]
+            if line.startswith("|")
+        ][:2]
+        self.assertEqual(len(header_rows), 2, "the shipped Languages table must have a header and a separator row")
+        block = skeleton_block(self.reset, "01-candidate-profile.md")
+        identity = block[block.index("## Identity"): block.index("## Education")]
+        self.assertIn("### Languages", identity, "the Languages table must sit under Identity, as shipped")
+        for row in header_rows:
+            with self.subTest(row=row):
+                self.assertIn(row, identity)
+        self.assertNotIn("[LANGUAGE]", block, "a reset must not reintroduce a placeholder data row")
 
     def test_partial_anchors_exist_in_the_files_they_target(self):
         # (reset.md anchor phrase, file, heading the replacement must re-emit)

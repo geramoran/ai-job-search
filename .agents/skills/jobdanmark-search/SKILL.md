@@ -46,13 +46,16 @@ Invoke this skill when the user wants to:
 bun run .agents/skills/jobdanmark-search/cli/src/cli.ts search [flags]
 ```
 
+Query syntax: double quotes inside the argument make an exact phrase, word order included (e.g. `--text '"product owner"'`); single quotes are searched literally and return nothing; no OR.
+
 Key flags:
 - `--text <keyword>` — free-text search, e.g. `elektriker`, `sygeplejerske`, `softwareudvikler`
 - `--category <id>` — category ID (see Categories table below)
 - `--jobtitle-id <id>` — job title ID from `autocomplete` results
 - `--municipality <name>` — e.g. `Odense`, `København`, `Aarhus`
 - `--zip <code>` — zip code, e.g. `5000`, `8000`, `2100`
-- `--region <name>` — region name, e.g. `Midtjylland`, `Sjælland`
+- `--region <name>` — landsdel (`locations` category `region`), e.g. `Sjælland`, `Østjylland`, `Fyn`
+- `--administrative-region <name>` — one of the five regions (`locations` category `administrativeRegion`), e.g. `Region Midtjylland`
 - `--job-type <types>` — comma-separated: `fuldtid`, `deltid`, `fleksjob`, `elev`, `studiejob`, `praktik`
 - `--page <n>` — page number (30 items per page, server-enforced)
 - `--limit <n>` — cap total results returned by CLI
@@ -91,7 +94,7 @@ Use this to resolve search terms into precise job title IDs (`--jobtitle-id`) or
 bun run .agents/skills/jobdanmark-search/cli/src/cli.ts locations --query "<text>" [--limit <n>]
 ```
 
-Returns matching municipalities, zip codes, and regions. Use `value` from results as `--municipality` or `--zip` in `search`.
+Returns matching municipalities, zip codes, and regions. Pass an item's `value` to the `search` flag named by its `category`: `municipality` → `--municipality`, `zip` → `--zip`, `region` → `--region`, `administrativeRegion` → `--administrative-region`. A value under the wrong flag matches no jobs.
 
 ---
 
